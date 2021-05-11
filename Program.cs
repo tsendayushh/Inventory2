@@ -16,7 +16,15 @@ namespace Treasurer2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            MainForm mainForm = new MainForm();
+            LoginForm loginForm = new LoginForm();
+
+            if(loginForm.ShowDialog() == DialogResult.OK)
+            {
+                mainForm.accUser.Text = loginForm.textBoxUsername.Text;
+                loginForm.Close();
+                Application.Run(mainForm);
+            }
         }
     }
 }

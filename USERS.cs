@@ -6,34 +6,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-
 namespace Treasurer2
 {
-    class PRODUCTS
+    class USERS
     {
         MyDatabase db = new MyDatabase();
-        public DataTable getDataTable(MySqlCommand command)
+
+        public DataTable getUserByUsername(string username)
         {
-            command.Connection = db.getConnection();
+            MySqlCommand command = new MySqlCommand("CALL `usersdb`.`select_user_by_username`(@uname);", db.getConnection());
+            command.Parameters.Add("@uname", MySqlDbType.VarChar).Value = username;
             MySqlDataAdapter adapter = new MySqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
-            db.closeConnection();
-
+            db.openConnection();
             return table;
+
         }
 
-        public bool addProduct(string pName, string pType, DateTime mDate, DateTime eDate, string owner, MemoryStream image)
+        public bool addUser(string firstname, string lastname, string email, string username, string password, MemoryStream image)
         {
-            MySqlCommand command = new MySqlCommand("CALL `usersdb`.`insert_product`(@pn, @pt, @dm, @de, @prf, @img);", db.getConnection());
+            MySqlCommand command = new MySqlCommand("CALL `usersdb`.`insert_user`(@fname, @lname, @email, @uname, @pass, @pic);", db.getConnection());
 
             //@pn, @pt, @dm, @de, @prf, @img
-            command.Parameters.Add("@pn", MySqlDbType.VarChar).Value = pName;
-            command.Parameters.Add("@pt", MySqlDbType.VarChar).Value = pType;
-            command.Parameters.Add("@dm", MySqlDbType.Date).Value = mDate;
-            command.Parameters.Add("@de", MySqlDbType.Date).Value = eDate;
-            command.Parameters.Add("@prf", MySqlDbType.VarChar).Value = owner;
-            command.Parameters.Add("@img", MySqlDbType.LongBlob).Value = image.ToArray();
+            command.Parameters.Add("@fname", MySqlDbType.VarChar).Value = firstname;
+            command.Parameters.Add("@lname", MySqlDbType.VarChar).Value = lastname;
+            command.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
+            command.Parameters.Add("@uname", MySqlDbType.VarChar).Value = username;
+            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password;
+            command.Parameters.Add("@pic", MySqlDbType.LongBlob).Value = image.ToArray();
 
             db.openConnection();
 
@@ -49,7 +50,26 @@ namespace Treasurer2
             }
         }
 
-        public bool updateProduct(int ID ,string pName, string pType, DateTime mDate, DateTime eDate, string owner, MemoryStream image)
+        public bool usernameCheck(string username)
+        {
+            MySqlCommand command = new MySqlCommand("CALL `usersdb`.`select_user_by_username`(@uname);", db.getConnection());
+            command.Parameters.Add("@uname", MySqlDbType.VarChar).Value = username;
+            db.openConnection();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            if(table.Rows.Count == 0)
+            {
+                db.closeConnection();
+                return true;
+            }
+            {
+                db.closeConnection();
+                return false;
+            }
+        }
+
+        public bool updateProduct(int ID, string pName, string pType, DateTime mDate, DateTime eDate, string owner, MemoryStream image)
         {
             try
             {
@@ -101,16 +121,5 @@ namespace Treasurer2
             }
         }
 
-        public DataTable getProductByID(string pid)
-        {
-            int ID = Convert.ToInt32(pid);
-            MySqlCommand command = new MySqlCommand("CALL `usersdb`.`select_product_by_id`(" + ID + ")", db.getConnection());
-            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            db.closeConnection();
-            return table;
-            
-        }
     }
 }

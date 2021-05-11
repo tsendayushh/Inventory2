@@ -15,7 +15,11 @@ namespace Treasurer2
 
         private MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=mysql1CODE;database=usersdb");
 
-        public MySqlConnection Connection { get => connection; set => connection = value; }
+        public MySqlConnection Connection
+        {
+            get => connection; 
+            set => connection = value;
+        }
 
         //open connection
         public void openConnection()
