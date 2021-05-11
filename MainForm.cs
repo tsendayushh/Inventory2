@@ -39,5 +39,18 @@ namespace Treasurer2
             }
             UsersOfTreasurer.Instance.BringToFront();
         }
+
+        private void accAddProduct_Click(object sender, EventArgs e)
+        {
+            AddProductForm addPForm = new AddProductForm();
+            addPForm.Show(this);
+        }
+
+        private void accEditProduct_Click(object sender, EventArgs e)
+        {
+            UpdateProductForm updatePForm = new UpdateProductForm();
+            updatePForm.Show(this);
+
+        }
     }
 }

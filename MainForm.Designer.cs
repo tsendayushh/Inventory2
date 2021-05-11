@@ -34,7 +34,11 @@ namespace Treasurer2
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceProducts = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accAddProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accEditProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.aceUsers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement4 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accordionControlElement5 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
@@ -73,22 +77,52 @@ namespace Treasurer2
             // 
             // aceProducts
             // 
+            this.aceProducts.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accAddProduct,
+            this.accEditProduct});
             this.aceProducts.Name = "aceProducts";
-            this.aceProducts.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceProducts.Text = "Эд хогшилууд";
             this.aceProducts.Click += new System.EventHandler(this.aceProducts_Click);
             // 
+            // accAddProduct
+            // 
+            this.accAddProduct.Name = "accAddProduct";
+            this.accAddProduct.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accAddProduct.Text = "Нэмж бүртгэх";
+            this.accAddProduct.Click += new System.EventHandler(this.accAddProduct_Click);
+            // 
+            // accEditProduct
+            // 
+            this.accEditProduct.Name = "accEditProduct";
+            this.accEditProduct.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accEditProduct.Text = "Засварлах";
+            this.accEditProduct.Click += new System.EventHandler(this.accEditProduct_Click);
+            // 
             // aceUsers
             // 
+            this.aceUsers.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.accordionControlElement4,
+            this.accordionControlElement5});
             this.aceUsers.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
             this.aceUsers.Name = "aceUsers";
-            this.aceUsers.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.aceUsers.Text = "Хэрэглэгчид";
             this.aceUsers.Click += new System.EventHandler(this.aceUsers_Click);
+            // 
+            // accordionControlElement4
+            // 
+            this.accordionControlElement4.Name = "accordionControlElement4";
+            this.accordionControlElement4.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement4.Text = "Element4";
+            // 
+            // accordionControlElement5
+            // 
+            this.accordionControlElement5.Name = "accordionControlElement5";
+            this.accordionControlElement5.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accordionControlElement5.Text = "Element5";
             // 
             // fluentDesignFormControl1
             // 
@@ -134,5 +168,9 @@ namespace Treasurer2
         private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceProducts;
         private DevExpress.XtraBars.Navigation.AccordionControlElement aceUsers;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accAddProduct;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accEditProduct;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement4;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement5;
     }
 }
