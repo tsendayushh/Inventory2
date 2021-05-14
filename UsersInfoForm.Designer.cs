@@ -29,6 +29,7 @@ namespace Treasurer2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersInfoForm));
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -137,10 +138,11 @@ namespace Treasurer2
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.pictureOfUser);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("UsersInfoForm.IconOptions.SvgImage")));
             this.MaximizeBox = false;
             this.Name = "UsersInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UsersInfoForm";
+            this.Text = "Хэрэглэгчийн мэдээлэл";
             ((System.ComponentModel.ISupportInitialize)(this.pictureOfUser.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -19,6 +19,7 @@ namespace Treasurer2
             InitializeComponent();
         }
 
+        #region  Login_button_Click
         private void button1_Click(object sender, EventArgs e)
         {
             MyDatabase db = new MyDatabase();
@@ -54,7 +55,19 @@ namespace Treasurer2
                 MessageBox.Show("Your account does't exist or wrong password");
 
             }
+            
+            
         }
+        #endregion
+
+
+        #region sendUsername
+        public string sendUsername()
+        {
+            string username = textBoxUsername.Text;
+            return username;
+        }
+        #endregion
     }
-    
+
 }

@@ -12,21 +12,10 @@ namespace Treasurer2
     {
         MyDatabase db = new MyDatabase();
 
-        public DataTable getUserByUsername(string username)
+        #region addUser
+        public bool addUser(string firstname, string lastname, string email, string username, string password, MemoryStream image, string sex)
         {
-            MySqlCommand command = new MySqlCommand("CALL `usersdb`.`select_user_by_username`(@uname);", db.getConnection());
-            command.Parameters.Add("@uname", MySqlDbType.VarChar).Value = username;
-            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            db.openConnection();
-            return table;
-
-        }
-
-        public bool addUser(string firstname, string lastname, string email, string username, string password, MemoryStream image)
-        {
-            MySqlCommand command = new MySqlCommand("CALL `usersdb`.`insert_user`(@fname, @lname, @email, @uname, @pass, @pic);", db.getConnection());
+            MySqlCommand command = new MySqlCommand("CALL `usersdb`.`insert_user`(@fname, @lname, @email, @uname, @pass, @pic, @sex);", db.getConnection());
 
             //@pn, @pt, @dm, @de, @prf, @img
             command.Parameters.Add("@fname", MySqlDbType.VarChar).Value = firstname;
@@ -35,6 +24,7 @@ namespace Treasurer2
             command.Parameters.Add("@uname", MySqlDbType.VarChar).Value = username;
             command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = password;
             command.Parameters.Add("@pic", MySqlDbType.LongBlob).Value = image.ToArray();
+            command.Parameters.Add("@sex", MySqlDbType.VarChar).Value = sex;
 
             db.openConnection();
 
@@ -49,7 +39,10 @@ namespace Treasurer2
                 return false;
             }
         }
+        #endregion
 
+
+        #region usernameCheck
         public bool usernameCheck(string username)
         {
             MySqlCommand command = new MySqlCommand("CALL `usersdb`.`select_user_by_username`(@uname);", db.getConnection());
@@ -68,21 +61,23 @@ namespace Treasurer2
                 return false;
             }
         }
+        #endregion
 
-        public bool updateProduct(int ID, string pName, string pType, DateTime mDate, DateTime eDate, string owner, MemoryStream image)
+
+        #region updateUser
+        public bool updateUser(int ID, string firstname, string lastname, string email, string username, MemoryStream image, string sex)
         {
             try
             {
-                MySqlCommand command = new MySqlCommand("CALL `usersdb`.`update_product`(@ID,@pn, @pt, @dm, @de, @prf, @img);", db.getConnection());
+                MySqlCommand command = new MySqlCommand("CALL `usersdb`.`update_user`(@ID, @fname, @lname, @email, @uname, @pic, @sex); ", db.getConnection());
 
-                //@ID,@pn, @pt, @dm, @de, @prf, @img
-                command.Parameters.Add("@ID", MySqlDbType.Int32).Value = ID;
-                command.Parameters.Add("@pn", MySqlDbType.VarChar).Value = pName;
-                command.Parameters.Add("@pt", MySqlDbType.VarChar).Value = pType;
-                command.Parameters.Add("@dm", MySqlDbType.Timestamp).Value = mDate;
-                command.Parameters.Add("@de", MySqlDbType.Timestamp).Value = eDate;
-                command.Parameters.Add("@prf", MySqlDbType.VarChar).Value = owner;
-                command.Parameters.Add("@img", MySqlDbType.LongBlob).Value = image.ToArray();
+                command.Parameters.Add("@ID", MySqlDbType.VarChar).Value = ID;
+                command.Parameters.Add("@fname", MySqlDbType.VarChar).Value = firstname;
+                command.Parameters.Add("@lname", MySqlDbType.VarChar).Value = lastname;
+                command.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
+                command.Parameters.Add("@uname", MySqlDbType.VarChar).Value = username;
+                command.Parameters.Add("@pic", MySqlDbType.LongBlob).Value = image.ToArray();
+                command.Parameters.Add("@sex", MySqlDbType.VarChar).Value = sex;
 
                 db.openConnection();
 
@@ -100,12 +95,14 @@ namespace Treasurer2
             catch (Exception ex)
             { throw ex; }
         }
+        #endregion
 
-        public bool deleteProduct(int id)
+
+        #region deleteUser
+        public bool deleteUser(int ID)
         {
-            MySqlCommand command = new MySqlCommand("CALL `usersdb`.`delete_product`(@ID);;", db.getConnection());
-
-            command.Parameters.Add("@ID", MySqlDbType.Int32).Value = id;
+            MySqlCommand command = new MySqlCommand("CALL `usersdb`.`delete_user`(@ID);", db.getConnection());
+            command.Parameters.Add("@ID", MySqlDbType.VarChar).Value = ID;
 
             db.openConnection();
 
@@ -120,6 +117,7 @@ namespace Treasurer2
                 return false;
             }
         }
+        #endregion
 
     }
 }

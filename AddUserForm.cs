@@ -19,6 +19,8 @@ namespace Treasurer2
             InitializeComponent();
         }
 
+
+        #region uploadPictureButton_Click
         private void uploadPictureButton_Click(object sender, EventArgs e)
         {
 
@@ -30,7 +32,10 @@ namespace Treasurer2
                 pictureEdit.Image = Image.FromFile(opf.FileName);
             }
         }
+        #endregion
 
+
+        #region verif
         bool verif()
         {
             if ((textBoxFirstname.Text.Trim() == "") ||
@@ -47,7 +52,10 @@ namespace Treasurer2
                 return true;
             }
         }
+        #endregion
 
+
+        #region simpleButtonAdd_Click
         private void simpleButtonAdd_Click(object sender, EventArgs e)
         {
             USERS uSERS = new USERS();
@@ -56,6 +64,7 @@ namespace Treasurer2
             {
                 string firstname = textBoxFirstname.Text;
                 string lastname = textBoxLastname.Text;
+                string sex = getSex();
                 string email = textBoxEmail.Text;
                 string username = textBoxUsername.Text;
                 string password = textBoxPassword.Text;
@@ -65,7 +74,7 @@ namespace Treasurer2
 
                 if (uSERS.usernameCheck(username) == true )
                 {
-                    if (uSERS.addUser(firstname, lastname, email, username, password, image))
+                    if (uSERS.addUser(firstname, lastname, email, username, password, image, sex))
                     {
                         MessageBox.Show("Хэрэглэгчийн бүртгэл амжилттай боллоо.", "Бүртгэл", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -86,10 +95,31 @@ namespace Treasurer2
                 MessageBox.Show("Мэдээлэл дутуу оруулсан байна.\nМэдээллээ шалгаад дахиг оруулна уу!", "Мэдээлэл дутуу байна", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+
+        #region simpleButtonCancel_Click
         private void simpleButtonCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
+
+
+        #region getSex
+        private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+        public string getSex()
+        {
+            int sexIndex = radioGroup1.SelectedIndex;
+            string sex = "";
+            if (sexIndex == 0) sex = "M";
+            else if (sexIndex == 1) sex = "F";
+            else sex = "O";
+            return sex;
+        }
+        #endregion
     }
 }

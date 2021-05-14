@@ -237,7 +237,9 @@ namespace Treasurer2
             this.glueCategory.Name = "glueCategory";
             this.glueCategory.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.glueCategory.Properties.DisplayMember = "product_type";
             this.glueCategory.Properties.PopupView = this.gridLookUpEdit1View;
+            this.glueCategory.Properties.ValueMember = "product_type";
             this.glueCategory.Size = new System.Drawing.Size(231, 20);
             this.glueCategory.TabIndex = 39;
             // 
@@ -254,7 +256,9 @@ namespace Treasurer2
             this.glueOwner.Name = "glueOwner";
             this.glueOwner.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.glueOwner.Properties.DisplayMember = "username";
             this.glueOwner.Properties.PopupView = this.gridView1;
+            this.glueOwner.Properties.ValueMember = "username";
             this.glueOwner.Size = new System.Drawing.Size(231, 20);
             this.glueOwner.TabIndex = 40;
             // 

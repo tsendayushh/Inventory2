@@ -45,12 +45,18 @@ namespace Treasurer2
             this.simpleButtonDelete = new DevExpress.XtraEditors.SimpleButton();
             this.glueUsername = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.textBoxID = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxLastname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxFirstname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.glueUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl3
@@ -64,7 +70,7 @@ namespace Treasurer2
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(139, 136);
+            this.textBoxEmail.Location = new System.Drawing.Point(139, 121);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(231, 20);
             this.textBoxEmail.TabIndex = 52;
@@ -78,24 +84,26 @@ namespace Treasurer2
             // 
             // simpleButtonCancel
             // 
-            this.simpleButtonCancel.Location = new System.Drawing.Point(457, 185);
+            this.simpleButtonCancel.Location = new System.Drawing.Point(457, 224);
             this.simpleButtonCancel.Name = "simpleButtonCancel";
             this.simpleButtonCancel.Size = new System.Drawing.Size(131, 34);
             this.simpleButtonCancel.TabIndex = 50;
             this.simpleButtonCancel.Text = "Цуцлах";
+            this.simpleButtonCancel.Click += new System.EventHandler(this.simpleButtonCancel_Click);
             // 
             // simpleButtonUpdate
             // 
-            this.simpleButtonUpdate.Location = new System.Drawing.Point(64, 185);
+            this.simpleButtonUpdate.Location = new System.Drawing.Point(64, 224);
             this.simpleButtonUpdate.Name = "simpleButtonUpdate";
             this.simpleButtonUpdate.Size = new System.Drawing.Size(131, 34);
             this.simpleButtonUpdate.TabIndex = 49;
-            this.simpleButtonUpdate.Text = "Бүртгэх";
+            this.simpleButtonUpdate.Text = "Засварлах";
+            this.simpleButtonUpdate.Click += new System.EventHandler(this.simpleButtonUpdate_Click);
             // 
             // labelControl6
             // 
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl6.Location = new System.Drawing.Point(373, 43);
+            this.labelControl6.Location = new System.Drawing.Point(392, 46);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(34, 14);
             this.labelControl6.TabIndex = 48;
@@ -104,7 +112,7 @@ namespace Treasurer2
             // labelControl5
             // 
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl5.Location = new System.Drawing.Point(64, 139);
+            this.labelControl5.Location = new System.Drawing.Point(64, 124);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(69, 14);
             this.labelControl5.TabIndex = 47;
@@ -122,7 +130,7 @@ namespace Treasurer2
             // labelControl1
             // 
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl1.Location = new System.Drawing.Point(62, 59);
+            this.labelControl1.Location = new System.Drawing.Point(62, 72);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(71, 14);
             this.labelControl1.TabIndex = 45;
@@ -131,36 +139,38 @@ namespace Treasurer2
             // uploadPictureButton
             // 
             this.uploadPictureButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("uploadPictureButton.ImageOptions.SvgImage")));
-            this.uploadPictureButton.Location = new System.Drawing.Point(413, 132);
+            this.uploadPictureButton.Location = new System.Drawing.Point(432, 191);
             this.uploadPictureButton.Name = "uploadPictureButton";
-            this.uploadPictureButton.Size = new System.Drawing.Size(230, 27);
+            this.uploadPictureButton.Size = new System.Drawing.Size(195, 27);
             this.uploadPictureButton.TabIndex = 44;
             this.uploadPictureButton.Text = "Upload image";
+            this.uploadPictureButton.Click += new System.EventHandler(this.uploadPictureButton_Click);
             // 
             // textBoxFirstname
             // 
-            this.textBoxFirstname.Location = new System.Drawing.Point(139, 56);
+            this.textBoxFirstname.Location = new System.Drawing.Point(139, 69);
             this.textBoxFirstname.Name = "textBoxFirstname";
             this.textBoxFirstname.Size = new System.Drawing.Size(231, 20);
             this.textBoxFirstname.TabIndex = 42;
             // 
             // pictureEdit
             // 
-            this.pictureEdit.Location = new System.Drawing.Point(413, 2);
+            this.pictureEdit.Location = new System.Drawing.Point(432, 4);
             this.pictureEdit.Name = "pictureEdit";
             this.pictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.StretchVertical;
-            this.pictureEdit.Size = new System.Drawing.Size(231, 124);
+            this.pictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit.Size = new System.Drawing.Size(195, 181);
             this.pictureEdit.TabIndex = 43;
             this.pictureEdit.TabStop = true;
             // 
             // simpleButtonDelete
             // 
-            this.simpleButtonDelete.Location = new System.Drawing.Point(263, 185);
+            this.simpleButtonDelete.Location = new System.Drawing.Point(263, 224);
             this.simpleButtonDelete.Name = "simpleButtonDelete";
             this.simpleButtonDelete.Size = new System.Drawing.Size(131, 34);
             this.simpleButtonDelete.TabIndex = 58;
-            this.simpleButtonDelete.Text = "Цуцлах";
+            this.simpleButtonDelete.Text = "Устгах";
+            this.simpleButtonDelete.Click += new System.EventHandler(this.simpleButtonDelete_Click);
             // 
             // glueUsername
             // 
@@ -168,9 +178,12 @@ namespace Treasurer2
             this.glueUsername.Name = "glueUsername";
             this.glueUsername.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.glueUsername.Properties.DisplayMember = "username";
             this.glueUsername.Properties.PopupView = this.gridLookUpEdit1View;
+            this.glueUsername.Properties.ValueMember = "username";
             this.glueUsername.Size = new System.Drawing.Size(231, 20);
             this.glueUsername.TabIndex = 59;
+            this.glueUsername.EditValueChanged += new System.EventHandler(this.glueUsername_EditValueChanged);
             // 
             // gridLookUpEdit1View
             // 
@@ -179,11 +192,53 @@ namespace Treasurer2
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
+            // labelControl4
+            // 
+            this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.labelControl4.Location = new System.Drawing.Point(23, 46);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(110, 14);
+            this.labelControl4.TabIndex = 61;
+            this.labelControl4.Text = "Бүртгэлийн дугаар:";
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Location = new System.Drawing.Point(139, 43);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(231, 20);
+            this.textBoxID.TabIndex = 60;
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.labelControl7.Location = new System.Drawing.Point(104, 162);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(30, 14);
+            this.labelControl7.TabIndex = 62;
+            this.labelControl7.Text = "Хүйс:";
+            // 
+            // radioGroup1
+            // 
+            this.radioGroup1.Location = new System.Drawing.Point(139, 156);
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Columns = 3;
+            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Male", true, null, "M"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Female", true, null, "F"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Other", true, null, "O")});
+            this.radioGroup1.Size = new System.Drawing.Size(231, 29);
+            this.radioGroup1.TabIndex = 63;
+            this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
+            // 
             // UpdateUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 239);
+            this.ClientSize = new System.Drawing.Size(666, 270);
+            this.Controls.Add(this.radioGroup1);
+            this.Controls.Add(this.labelControl7);
+            this.Controls.Add(this.labelControl4);
+            this.Controls.Add(this.textBoxID);
             this.Controls.Add(this.glueUsername);
             this.Controls.Add(this.simpleButtonDelete);
             this.Controls.Add(this.labelControl3);
@@ -198,15 +253,19 @@ namespace Treasurer2
             this.Controls.Add(this.uploadPictureButton);
             this.Controls.Add(this.textBoxFirstname);
             this.Controls.Add(this.pictureEdit);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("UpdateUserForm.IconOptions.SvgImage")));
             this.MaximizeBox = false;
             this.Name = "UpdateUserForm";
             this.Text = "UpdateUserForm";
+            this.Load += new System.EventHandler(this.UpdateUserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textBoxEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxLastname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxFirstname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.glueUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,8 +273,6 @@ namespace Treasurer2
 
         #endregion
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textBoxEmail;
-        private DevExpress.XtraEditors.TextEdit textBoxLastname;
         private DevExpress.XtraEditors.SimpleButton simpleButtonCancel;
         private DevExpress.XtraEditors.SimpleButton simpleButtonUpdate;
         private DevExpress.XtraEditors.LabelControl labelControl6;
@@ -223,10 +280,16 @@ namespace Treasurer2
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.SimpleButton uploadPictureButton;
-        private DevExpress.XtraEditors.TextEdit textBoxFirstname;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit;
         private DevExpress.XtraEditors.SimpleButton simpleButtonDelete;
-        private DevExpress.XtraEditors.GridLookUpEdit glueUsername;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        internal DevExpress.XtraEditors.TextEdit textBoxEmail;
+        internal DevExpress.XtraEditors.TextEdit textBoxLastname;
+        internal DevExpress.XtraEditors.TextEdit textBoxFirstname;
+        internal DevExpress.XtraEditors.PictureEdit pictureEdit;
+        internal DevExpress.XtraEditors.GridLookUpEdit glueUsername;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        internal DevExpress.XtraEditors.TextEdit textBoxID;
+        internal DevExpress.XtraEditors.LabelControl labelControl7;
+        internal DevExpress.XtraEditors.RadioGroup radioGroup1;
     }
 }

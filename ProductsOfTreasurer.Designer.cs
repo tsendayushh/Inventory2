@@ -32,6 +32,11 @@ namespace Treasurer2
             this.components = new System.ComponentModel.Container();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsOfTreasurer));
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            this.coldate_expire = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonAdd = new System.Windows.Forms.ToolStripButton();
@@ -45,21 +50,29 @@ namespace Treasurer2
             this.toolStripTextBoxSearch = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButtonSearch = new System.Windows.Forms.ToolStripButton();
             this.standaloneBarDockControl1 = new DevExpress.XtraBars.StandaloneBarDockControl();
-            this.barAndDockingController1 = new DevExpress.XtraBars.BarAndDockingController(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colproduct_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colpname = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colptype = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldate_manufactured = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldate_expire = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colperson_responsible_for = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colimage = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // coldate_expire
+            // 
+            this.coldate_expire.Caption = "Date expire";
+            this.coldate_expire.FieldName = "date_expire";
+            this.coldate_expire.Name = "coldate_expire";
+            this.coldate_expire.OptionsColumn.AllowEdit = false;
+            this.coldate_expire.OptionsColumn.ReadOnly = true;
+            this.coldate_expire.Visible = true;
+            this.coldate_expire.VisibleIndex = 5;
+            this.coldate_expire.Width = 159;
             // 
             // sqlDataSource1
             // 
@@ -176,10 +189,6 @@ namespace Treasurer2
             this.standaloneBarDockControl1.Size = new System.Drawing.Size(581, 404);
             this.standaloneBarDockControl1.Text = "standaloneBarDockControl1";
             // 
-            // barAndDockingController1
-            // 
-            this.barAndDockingController1.PropertiesBar.AllowLinkLighting = false;
-            // 
             // gridControl1
             // 
             this.gridControl1.DataMember = "usersdb_select_product";
@@ -204,6 +213,22 @@ namespace Treasurer2
             this.coldate_expire,
             this.colperson_responsible_for,
             this.colimage});
+            gridFormatRule1.Column = this.coldate_expire;
+            gridFormatRule1.ColumnApplyTo = this.coldate_expire;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Greater;
+            formatConditionRuleValue1.PredefinedName = "Green Fill, Green Text";
+            formatConditionRuleValue1.Value1 = new System.DateTime(2021, 5, 14, 16, 8, 44, 0);
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            gridFormatRule2.Column = this.coldate_expire;
+            gridFormatRule2.ColumnApplyTo = this.coldate_expire;
+            gridFormatRule2.Name = "Format1";
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.LessOrEqual;
+            formatConditionRuleValue2.PredefinedName = "Red Fill, Red Text";
+            formatConditionRuleValue2.Value1 = new System.DateTime(2021, 5, 14, 16, 11, 28, 49);
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            this.gridView1.FormatRules.Add(gridFormatRule1);
+            this.gridView1.FormatRules.Add(gridFormatRule2);
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowFooter = true;
@@ -214,6 +239,7 @@ namespace Treasurer2
             // 
             // colproduct_id
             // 
+            this.colproduct_id.Caption = "ID";
             this.colproduct_id.FieldName = "product_id";
             this.colproduct_id.Name = "colproduct_id";
             this.colproduct_id.OptionsColumn.AllowEdit = false;
@@ -224,6 +250,7 @@ namespace Treasurer2
             // 
             // colpname
             // 
+            this.colpname.Caption = "Product name";
             this.colpname.FieldName = "pname";
             this.colpname.Name = "colpname";
             this.colpname.OptionsColumn.AllowEdit = false;
@@ -234,6 +261,7 @@ namespace Treasurer2
             // 
             // colptype
             // 
+            this.colptype.Caption = "Category";
             this.colptype.FieldName = "ptype";
             this.colptype.Name = "colptype";
             this.colptype.OptionsColumn.AllowEdit = false;
@@ -244,36 +272,29 @@ namespace Treasurer2
             // 
             // coldate_manufactured
             // 
+            this.coldate_manufactured.Caption = "Date manufactured";
             this.coldate_manufactured.FieldName = "date_manufactured";
             this.coldate_manufactured.Name = "coldate_manufactured";
             this.coldate_manufactured.OptionsColumn.AllowEdit = false;
             this.coldate_manufactured.OptionsColumn.ReadOnly = true;
             this.coldate_manufactured.Visible = true;
-            this.coldate_manufactured.VisibleIndex = 3;
+            this.coldate_manufactured.VisibleIndex = 4;
             this.coldate_manufactured.Width = 163;
-            // 
-            // coldate_expire
-            // 
-            this.coldate_expire.FieldName = "date_expire";
-            this.coldate_expire.Name = "coldate_expire";
-            this.coldate_expire.OptionsColumn.AllowEdit = false;
-            this.coldate_expire.OptionsColumn.ReadOnly = true;
-            this.coldate_expire.Visible = true;
-            this.coldate_expire.VisibleIndex = 5;
-            this.coldate_expire.Width = 159;
             // 
             // colperson_responsible_for
             // 
+            this.colperson_responsible_for.Caption = "Owner";
             this.colperson_responsible_for.FieldName = "person_responsible_for";
             this.colperson_responsible_for.Name = "colperson_responsible_for";
             this.colperson_responsible_for.OptionsColumn.AllowEdit = false;
             this.colperson_responsible_for.OptionsColumn.ReadOnly = true;
             this.colperson_responsible_for.Visible = true;
-            this.colperson_responsible_for.VisibleIndex = 4;
+            this.colperson_responsible_for.VisibleIndex = 3;
             this.colperson_responsible_for.Width = 156;
             // 
             // colimage
             // 
+            this.colimage.Caption = "Picture";
             this.colimage.FieldName = "image";
             this.colimage.Name = "colimage";
             this.colimage.OptionsColumn.AllowEdit = false;
@@ -293,7 +314,6 @@ namespace Treasurer2
             this.Size = new System.Drawing.Size(581, 429);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.barAndDockingController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -315,7 +335,6 @@ namespace Treasurer2
         private System.Windows.Forms.ToolStripTextBox toolStripTextBoxSearch;
         private System.Windows.Forms.ToolStripButton toolStripButtonSearch;
         private DevExpress.XtraBars.StandaloneBarDockControl standaloneBarDockControl1;
-        private DevExpress.XtraBars.BarAndDockingController barAndDockingController1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colproduct_id;

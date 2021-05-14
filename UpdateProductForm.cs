@@ -15,22 +15,25 @@ namespace Treasurer2
 {
     public partial class UpdateProductForm : DevExpress.XtraEditors.XtraForm
     {
-        PRODUCTS product = new PRODUCTS();
         MyDatabase db = new MyDatabase();
-        ProductsOfTreasurer productsOfTreasurer = new ProductsOfTreasurer();
+        PRODUCTS product = new PRODUCTS();
+        //MyDatabase db = new MyDatabase();
+        // ProductsOfTreasurer productsOfTreasurer = new ProductsOfTreasurer();
 
+        #region UpdateProductForm
         public UpdateProductForm()
         {
-
             InitializeComponent();
-            /*
             MySqlCommand command = new MySqlCommand("SELECT `product_type` FROM `usersdb`.`product_category`;", db.getConnection());
             MySqlCommand command1 = new MySqlCommand("SELECT `username` FROM `usersdb`.`users_of_treasurer`;");
 
-            glueOwner.Properties.DataSource = product.getDataTable(command);
-            glueOwner.Properties.DataSource = product.getDataTable(command1);
-            */
+            glueCategory.Properties.DataSource = db.getDataTable(command);
+            glueOwner.Properties.DataSource = db.getDataTable(command1);
         }
+        #endregion
+
+
+        #region verif
         bool verif()
         {
             if ((textBoxProductName.Text.Trim() == "") ||
@@ -47,7 +50,10 @@ namespace Treasurer2
                 return true;
             }
         }
+        #endregion
 
+
+        #region simpleButtonUpdate_Click
         private void simpleButtonUpdate_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textEditID.Text);
@@ -83,7 +89,10 @@ namespace Treasurer2
             }
 
         }
+        #endregion
 
+
+        #region simpleButtonDelete_Click
         private void simpleButtonDelete_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textEditID.Text);
@@ -106,12 +115,18 @@ namespace Treasurer2
             }
 
         }
+        #endregion
 
+
+        #region simpleButtonCancel_Click
         private void simpleButtonCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
 
+
+        #region uploadPictureButton_Click
         private void uploadPictureButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
@@ -122,7 +137,10 @@ namespace Treasurer2
                 pictureEdit.Image = Image.FromFile(opf.FileName);
             }
         }
+        #endregion
 
+
+        #region simpleButtonSearchByID_Click
         private void simpleButtonSearchByID_Click(object sender, EventArgs e)
         {
             // id gaar ni product haih uildel
@@ -149,6 +167,7 @@ namespace Treasurer2
             }
             
         }
+        #endregion
 
     }
 }

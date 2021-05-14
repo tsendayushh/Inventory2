@@ -9,18 +9,22 @@ using MySql.Data.MySqlClient;
 
 namespace Treasurer2
 {
-    class MyDatabase
+    public class MyDatabase
     {
-        //the connection
 
-        private MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=mysql1CODE;database=usersdb");
-
+        private MySqlConnection conn = new MySqlConnection("server=localhost;port=3306;username=root;password=mysql1CODE;database=usersdb");
         public MySqlConnection Connection
         {
-            get => connection; 
-            set => connection = value;
+            get => conn;
+            set
+            {
+                if (conn == value)
+                {
+                    return;
+                }
+                conn = value;
+            }
         }
-
         //open connection
         public void openConnection()
         {
@@ -45,6 +49,17 @@ namespace Treasurer2
         public MySqlConnection getConnection()
         {
             return Connection;
+        }
+
+        public DataTable getDataTable(MySqlCommand command)
+        {
+            command.Connection = getConnection();
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            closeConnection();
+
+            return table;
         }
     }
 }

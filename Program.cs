@@ -19,12 +19,15 @@ namespace Treasurer2
             MainForm mainForm = new MainForm();
             LoginForm loginForm = new LoginForm();
 
+            
             if(loginForm.ShowDialog() == DialogResult.OK)
             {
-                mainForm.accUser.Text = loginForm.textBoxUsername.Text;
                 loginForm.Close();
+                mainForm.accUser.Text = loginForm.sendUsername();
                 Application.Run(mainForm);
             }
+            
+
         }
     }
 }

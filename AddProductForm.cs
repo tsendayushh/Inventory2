@@ -18,23 +18,22 @@ namespace Treasurer2
         MyDatabase db = new MyDatabase();
         PRODUCTS product = new PRODUCTS();
 
+        #region AddProductForm
         public AddProductForm()
         {
-            InitializeComponent();        
-        }
-                
-        private void AddProductForm_Load(object sender, EventArgs e)
-        {
+            
+            InitializeComponent();
             MySqlCommand command = new MySqlCommand("SELECT `product_type` FROM `usersdb`.`product_category`;", db.getConnection());
-            db.closeConnection();
             MySqlCommand command1 = new MySqlCommand("SELECT `username` FROM `usersdb`.`users_of_treasurer`;", db.getConnection());
-            db.closeConnection();
 
-            glueCategory.Properties.DataSource = product.getDataTable(command);
-            glueOwner.Properties.DataSource = product.getDataTable(command1);
+            glueCategory.Properties.DataSource = db.getDataTable(command);
+            glueOwner.Properties.DataSource = db.getDataTable(command1);
+            
         }
+        #endregion
 
 
+        #region uploadPictureButton_Click
         private void uploadPictureButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog opf = new OpenFileDialog();
@@ -45,7 +44,10 @@ namespace Treasurer2
                 pictureEdit.Image = Image.FromFile(opf.FileName);
             }
         }
+        #endregion
 
+
+        #region veerif
         bool verif()
         {
             if ((textBoxProductName.Text.Trim() == "") ||
@@ -62,7 +64,10 @@ namespace Treasurer2
                 return true;
             }
         }
+        #endregion
 
+
+        #region simpleButtonAdd_Click
         private void simpleButtonAdd_Click(object sender, EventArgs e)
         {
             if (verif())
@@ -90,10 +95,14 @@ namespace Treasurer2
                 MessageBox.Show("Мэдээлэл дутуу оруулсан байна.\nМэдээллээ шалгаад дахиг оруулна уу!", "Мэдээлэл дутуу байна", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+
+        #region simpleButtonCancel_Click
         private void simpleButtonCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion
     }
 }            

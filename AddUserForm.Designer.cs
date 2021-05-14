@@ -46,6 +46,8 @@ namespace Treasurer2
             this.pictureEdit = new DevExpress.XtraEditors.PictureEdit();
             this.textBoxPassword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxEmail.Properties)).BeginInit();
@@ -53,11 +55,12 @@ namespace Treasurer2
             ((System.ComponentModel.ISupportInitialize)(this.textBoxFirstname.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // simpleButtonCancel
             // 
-            this.simpleButtonCancel.Location = new System.Drawing.Point(227, 374);
+            this.simpleButtonCancel.Location = new System.Drawing.Point(227, 418);
             this.simpleButtonCancel.Name = "simpleButtonCancel";
             this.simpleButtonCancel.Size = new System.Drawing.Size(131, 34);
             this.simpleButtonCancel.TabIndex = 34;
@@ -66,7 +69,7 @@ namespace Treasurer2
             // 
             // simpleButtonAdd
             // 
-            this.simpleButtonAdd.Location = new System.Drawing.Point(40, 374);
+            this.simpleButtonAdd.Location = new System.Drawing.Point(40, 418);
             this.simpleButtonAdd.Name = "simpleButtonAdd";
             this.simpleButtonAdd.Size = new System.Drawing.Size(131, 34);
             this.simpleButtonAdd.TabIndex = 33;
@@ -76,7 +79,7 @@ namespace Treasurer2
             // labelControl6
             // 
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl6.Location = new System.Drawing.Point(111, 239);
+            this.labelControl6.Location = new System.Drawing.Point(111, 283);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(34, 14);
             this.labelControl6.TabIndex = 32;
@@ -85,7 +88,7 @@ namespace Treasurer2
             // labelControl5
             // 
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl5.Location = new System.Drawing.Point(76, 91);
+            this.labelControl5.Location = new System.Drawing.Point(76, 135);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(69, 14);
             this.labelControl5.TabIndex = 31;
@@ -112,7 +115,7 @@ namespace Treasurer2
             // uploadPictureButton
             // 
             this.uploadPictureButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("uploadPictureButton.ImageOptions.SvgImage")));
-            this.uploadPictureButton.Location = new System.Drawing.Point(151, 328);
+            this.uploadPictureButton.Location = new System.Drawing.Point(151, 372);
             this.uploadPictureButton.Name = "uploadPictureButton";
             this.uploadPictureButton.Size = new System.Drawing.Size(230, 27);
             this.uploadPictureButton.TabIndex = 24;
@@ -122,7 +125,7 @@ namespace Treasurer2
             // labelControl3
             // 
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl3.Location = new System.Drawing.Point(40, 126);
+            this.labelControl3.Location = new System.Drawing.Point(40, 170);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(105, 14);
             this.labelControl3.TabIndex = 37;
@@ -131,7 +134,7 @@ namespace Treasurer2
             // pictureEdit1
             // 
             this.pictureEdit1.EditValue = global::Treasurer2.Properties.Resources.iconfinder_edit2_11679841;
-            this.pictureEdit1.Location = new System.Drawing.Point(12, 198);
+            this.pictureEdit1.Location = new System.Drawing.Point(12, 242);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -140,14 +143,14 @@ namespace Treasurer2
             // 
             // textBoxUsername
             // 
-            this.textBoxUsername.Location = new System.Drawing.Point(151, 123);
+            this.textBoxUsername.Location = new System.Drawing.Point(151, 167);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(231, 20);
             this.textBoxUsername.TabIndex = 38;
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(151, 88);
+            this.textBoxEmail.Location = new System.Drawing.Point(151, 132);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(231, 20);
             this.textBoxEmail.TabIndex = 36;
@@ -168,35 +171,60 @@ namespace Treasurer2
             // 
             // pictureEdit
             // 
-            this.pictureEdit.Location = new System.Drawing.Point(151, 198);
+            this.pictureEdit.Location = new System.Drawing.Point(151, 242);
             this.pictureEdit.Name = "pictureEdit";
             this.pictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.StretchVertical;
+            this.pictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.pictureEdit.Size = new System.Drawing.Size(231, 124);
             this.pictureEdit.TabIndex = 21;
             this.pictureEdit.TabStop = true;
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(151, 159);
+            this.textBoxPassword.Location = new System.Drawing.Point(151, 203);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.Properties.UseSystemPasswordChar = true;
             this.textBoxPassword.Size = new System.Drawing.Size(231, 20);
             this.textBoxPassword.TabIndex = 41;
             // 
             // labelControl4
             // 
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl4.Location = new System.Drawing.Point(40, 162);
+            this.labelControl4.Location = new System.Drawing.Point(99, 206);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(105, 14);
+            this.labelControl4.Size = new System.Drawing.Size(46, 14);
             this.labelControl4.TabIndex = 40;
-            this.labelControl4.Text = "Хэрэглэгчийн нэр:";
+            this.labelControl4.Text = "Нууц үг:";
+            // 
+            // radioGroup1
+            // 
+            this.radioGroup1.Location = new System.Drawing.Point(151, 82);
+            this.radioGroup1.Name = "radioGroup1";
+            this.radioGroup1.Properties.Columns = 3;
+            this.radioGroup1.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Male", true, null, "M"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Female", true, null, "F"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Other", true, null, "O")});
+            this.radioGroup1.Size = new System.Drawing.Size(230, 29);
+            this.radioGroup1.TabIndex = 65;
+            this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.labelControl7.Location = new System.Drawing.Point(115, 89);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(30, 14);
+            this.labelControl7.TabIndex = 64;
+            this.labelControl7.Text = "Хүйс:";
             // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 427);
+            this.ClientSize = new System.Drawing.Size(399, 466);
+            this.Controls.Add(this.radioGroup1);
+            this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.pictureEdit1);
@@ -213,6 +241,7 @@ namespace Treasurer2
             this.Controls.Add(this.uploadPictureButton);
             this.Controls.Add(this.textBoxFirstname);
             this.Controls.Add(this.pictureEdit);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("AddUserForm.IconOptions.SvgImage")));
             this.MaximizeBox = false;
             this.Name = "AddUserForm";
             this.Text = "AddUserForm";
@@ -223,6 +252,7 @@ namespace Treasurer2
             ((System.ComponentModel.ISupportInitialize)(this.textBoxFirstname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,5 +276,7 @@ namespace Treasurer2
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.TextEdit textBoxPassword;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        internal DevExpress.XtraEditors.RadioGroup radioGroup1;
     }
 }

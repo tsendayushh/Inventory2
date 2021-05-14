@@ -12,17 +12,9 @@ namespace Treasurer2
     class PRODUCTS
     {
         MyDatabase db = new MyDatabase();
-        public DataTable getDataTable(MySqlCommand command)
-        {
-            command.Connection = db.getConnection();
-            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-            DataTable table = new DataTable();
-            adapter.Fill(table);
-            db.closeConnection();
 
-            return table;
-        }
 
+        #region addProduct
         public bool addProduct(string pName, string pType, DateTime mDate, DateTime eDate, string owner, MemoryStream image)
         {
             MySqlCommand command = new MySqlCommand("CALL `usersdb`.`insert_product`(@pn, @pt, @dm, @de, @prf, @img);", db.getConnection());
@@ -48,7 +40,10 @@ namespace Treasurer2
                 return false;
             }
         }
+        #endregion
 
+
+        #region updateProduct
         public bool updateProduct(int ID ,string pName, string pType, DateTime mDate, DateTime eDate, string owner, MemoryStream image)
         {
             try
@@ -80,7 +75,10 @@ namespace Treasurer2
             catch (Exception ex)
             { throw ex; }
         }
+        #endregion
 
+
+        #region deleteProduct
         public bool deleteProduct(int id)
         {
             MySqlCommand command = new MySqlCommand("CALL `usersdb`.`delete_product`(@ID);;", db.getConnection());
@@ -100,7 +98,10 @@ namespace Treasurer2
                 return false;
             }
         }
+        #endregion
 
+
+        #region getProductByID
         public DataTable getProductByID(string pid)
         {
             int ID = Convert.ToInt32(pid);
@@ -112,5 +113,6 @@ namespace Treasurer2
             return table;
             
         }
+        #endregion
     }
 }
