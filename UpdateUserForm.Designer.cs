@@ -228,13 +228,12 @@ namespace Treasurer2
             new DevExpress.XtraEditors.Controls.RadioGroupItem(null, "Other", true, null, "O")});
             this.radioGroup1.Size = new System.Drawing.Size(231, 29);
             this.radioGroup1.TabIndex = 63;
-            this.radioGroup1.SelectedIndexChanged += new System.EventHandler(this.radioGroup1_SelectedIndexChanged);
             // 
             // UpdateUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 270);
+            this.ClientSize = new System.Drawing.Size(676, 272);
             this.Controls.Add(this.radioGroup1);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.labelControl4);
@@ -257,7 +256,6 @@ namespace Treasurer2
             this.MaximizeBox = false;
             this.Name = "UpdateUserForm";
             this.Text = "UpdateUserForm";
-            this.Load += new System.EventHandler(this.UpdateUserForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textBoxEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxLastname.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxFirstname.Properties)).EndInit();

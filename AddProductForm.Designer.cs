@@ -122,6 +122,8 @@ namespace Treasurer2
             // 
             // labelControl1
             // 
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.labelControl1.Appearance.Options.UseForeColor = true;
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl1.Location = new System.Drawing.Point(39, 14);
             this.labelControl1.Name = "labelControl1";
@@ -131,6 +133,8 @@ namespace Treasurer2
             // 
             // labelControl2
             // 
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.labelControl2.Appearance.Options.UseForeColor = true;
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl2.Location = new System.Drawing.Point(25, 53);
             this.labelControl2.Name = "labelControl2";
@@ -140,6 +144,8 @@ namespace Treasurer2
             // 
             // labelControl3
             // 
+            this.labelControl3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.labelControl3.Appearance.Options.UseForeColor = true;
             this.labelControl3.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl3.Location = new System.Drawing.Point(12, 90);
             this.labelControl3.Name = "labelControl3";
@@ -149,6 +155,8 @@ namespace Treasurer2
             // 
             // labelControl4
             // 
+            this.labelControl4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.labelControl4.Appearance.Options.UseForeColor = true;
             this.labelControl4.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl4.Location = new System.Drawing.Point(51, 137);
             this.labelControl4.Name = "labelControl4";
@@ -158,6 +166,8 @@ namespace Treasurer2
             // 
             // labelControl5
             // 
+            this.labelControl5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.labelControl5.Appearance.Options.UseForeColor = true;
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl5.Location = new System.Drawing.Point(61, 178);
             this.labelControl5.Name = "labelControl5";
@@ -167,6 +177,8 @@ namespace Treasurer2
             // 
             // labelControl6
             // 
+            this.labelControl6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.labelControl6.Appearance.Options.UseForeColor = true;
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
             this.labelControl6.Location = new System.Drawing.Point(111, 242);
             this.labelControl6.Name = "labelControl6";
@@ -232,13 +244,13 @@ namespace Treasurer2
             // 
             // AddProductForm
             // 
-            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
             this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(68)))));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 424);
+            this.ClientSize = new System.Drawing.Size(414, 426);
             this.Controls.Add(this.glueCategory);
             this.Controls.Add(this.glueOwner);
             this.Controls.Add(this.simpleButtonCancel);
@@ -259,7 +271,6 @@ namespace Treasurer2
             this.MaximizeBox = false;
             this.Name = "AddProductForm";
             this.Text = "Эд хогшил бүртгэх";
-            this.Load += new System.EventHandler(this.AddProductForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.textBoxProductName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditManufactured.Properties.CalendarTimeProperties)).EndInit();

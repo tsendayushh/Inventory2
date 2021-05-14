@@ -273,7 +273,7 @@ namespace Treasurer2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 326);
+            this.ClientSize = new System.Drawing.Size(675, 328);
             this.Controls.Add(this.glueOwner);
             this.Controls.Add(this.glueCategory);
             this.Controls.Add(this.simpleButtonSearchByID);

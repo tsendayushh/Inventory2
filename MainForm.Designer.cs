@@ -56,9 +56,9 @@ namespace Treasurer2
             // containerMainform
             // 
             this.containerMainform.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.containerMainform.Location = new System.Drawing.Point(237, 31);
+            this.containerMainform.Location = new System.Drawing.Point(237, 30);
             this.containerMainform.Name = "containerMainform";
-            this.containerMainform.Size = new System.Drawing.Size(561, 495);
+            this.containerMainform.Size = new System.Drawing.Size(563, 497);
             this.containerMainform.TabIndex = 0;
             // 
             // accordionControl1
@@ -67,10 +67,10 @@ namespace Treasurer2
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1,
             this.accordionControlSeparator5});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 31);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 30);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(237, 495);
+            this.accordionControl1.Size = new System.Drawing.Size(237, 497);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -92,6 +92,7 @@ namespace Treasurer2
             this.aceProducts.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accAddProduct,
             this.accEditProduct});
+            this.aceProducts.Expanded = true;
             this.aceProducts.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceProducts.ImageOptions.SvgImage")));
             this.aceProducts.Name = "aceProducts";
             this.aceProducts.Text = "Эд хогшилууд";
@@ -174,7 +175,7 @@ namespace Treasurer2
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(798, 31);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(800, 30);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -194,7 +195,7 @@ namespace Treasurer2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 526);
+            this.ClientSize = new System.Drawing.Size(800, 527);
             this.ControlContainer = this.containerMainform;
             this.Controls.Add(this.containerMainform);
             this.Controls.Add(this.accordionControl1);

@@ -18,5 +18,9 @@ namespace Treasurer2
             InitializeComponent();
         }
 
+        private void labelFirstname_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
