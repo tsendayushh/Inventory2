@@ -30,7 +30,7 @@ namespace Treasurer2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UsersOfTreasurer));
             this.sqlDataSource2 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -46,7 +46,6 @@ namespace Treasurer2
             this.toolStripButtonSearch = new System.Windows.Forms.ToolStripButton();
             this.standaloneBarDockControl1 = new DevExpress.XtraBars.StandaloneBarDockControl();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar2 = new DevExpress.XtraBars.Bar();
             this.toggleSwitchDark = new DevExpress.XtraBars.BarToggleSwitchItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -57,7 +56,8 @@ namespace Treasurer2
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
-            this.gridControlUsers = new DevExpress.XtraGrid.GridControl();
+            this.bar1 = new DevExpress.XtraBars.Bar();
+            this.bar3 = new DevExpress.XtraBars.Bar();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.coluser_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfirstname = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,22 +67,21 @@ namespace Treasurer2
             this.colpassword = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colpicture = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colsex = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.bar1 = new DevExpress.XtraBars.Bar();
-            this.bar3 = new DevExpress.XtraBars.Bar();
+            this.gridControlUsers = new DevExpress.XtraGrid.GridControl();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // sqlDataSource2
             // 
             this.sqlDataSource2.ConnectionName = "localhost_usersdb_Connection";
             this.sqlDataSource2.Name = "sqlDataSource2";
-            storedProcQuery2.Name = "usersdb_select_users_of_treasurer";
-            storedProcQuery2.StoredProcName = "usersdb.select_users_of_treasurer";
+            storedProcQuery1.Name = "usersdb_select_users_of_treasurer";
+            storedProcQuery1.StoredProcName = "usersdb.select_users_of_treasurer";
             this.sqlDataSource2.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery2});
+            storedProcQuery1});
             this.sqlDataSource2.ResultSchemaSerializable = resources.GetString("sqlDataSource2.ResultSchemaSerializable");
             // 
             // toolStrip1
@@ -187,13 +186,11 @@ namespace Treasurer2
             this.standaloneBarDockControl1.Location = new System.Drawing.Point(0, 25);
             this.standaloneBarDockControl1.Manager = this.barManager1;
             this.standaloneBarDockControl1.Name = "standaloneBarDockControl1";
-            this.standaloneBarDockControl1.Size = new System.Drawing.Size(577, 408);
+            this.standaloneBarDockControl1.Size = new System.Drawing.Size(577, 433);
             this.standaloneBarDockControl1.Text = "standaloneBarDockControl1";
             // 
             // barManager1
             // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar2});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -207,20 +204,7 @@ namespace Treasurer2
             this.barButtonItem1,
             this.barCheckItem1,
             this.skinDropDownButtonItem1});
-            this.barManager1.MainMenu = this.bar2;
             this.barManager1.MaxItemId = 7;
-            // 
-            // bar2
-            // 
-            this.bar2.BarName = "Main menu";
-            this.bar2.DockCol = 0;
-            this.bar2.DockRow = 0;
-            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
-            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.toggleSwitchDark)});
-            this.bar2.OptionsBar.MultiLine = true;
-            this.bar2.OptionsBar.UseWholeRow = true;
-            this.bar2.Text = "Main menu";
             // 
             // toggleSwitchDark
             // 
@@ -240,9 +224,9 @@ namespace Treasurer2
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 433);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 458);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(577, 25);
+            this.barDockControlBottom.Size = new System.Drawing.Size(577, 0);
             // 
             // barDockControlLeft
             // 
@@ -250,7 +234,7 @@ namespace Treasurer2
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 433);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 458);
             // 
             // barDockControlRight
             // 
@@ -258,7 +242,7 @@ namespace Treasurer2
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(577, 0);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 433);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 458);
             // 
             // addButton
             // 
@@ -289,19 +273,21 @@ namespace Treasurer2
             this.skinDropDownButtonItem1.Id = 6;
             this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
             // 
-            // gridControlUsers
+            // bar1
             // 
-            this.gridControlUsers.DataMember = "usersdb_select_users_of_treasurer";
-            this.gridControlUsers.DataSource = this.sqlDataSource2;
-            this.gridControlUsers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControlUsers.Location = new System.Drawing.Point(0, 25);
-            this.gridControlUsers.MainView = this.gridView1;
-            this.gridControlUsers.Name = "gridControlUsers";
-            this.gridControlUsers.Size = new System.Drawing.Size(577, 408);
-            this.gridControlUsers.TabIndex = 10;
-            this.gridControlUsers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
-            this.gridControlUsers.DoubleClick += new System.EventHandler(this.gridControlUsers_DoubleClick);
+            this.bar1.BarName = "Custom 3";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 0;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.Text = "Custom 3";
+            // 
+            // bar3
+            // 
+            this.bar3.BarName = "Custom 4";
+            this.bar3.DockCol = 0;
+            this.bar3.DockRow = 1;
+            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar3.Text = "Custom 4";
             // 
             // gridView1
             // 
@@ -403,21 +389,19 @@ namespace Treasurer2
             this.colsex.VisibleIndex = 3;
             this.colsex.Width = 69;
             // 
-            // bar1
+            // gridControlUsers
             // 
-            this.bar1.BarName = "Custom 3";
-            this.bar1.DockCol = 0;
-            this.bar1.DockRow = 0;
-            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar1.Text = "Custom 3";
-            // 
-            // bar3
-            // 
-            this.bar3.BarName = "Custom 4";
-            this.bar3.DockCol = 0;
-            this.bar3.DockRow = 1;
-            this.bar3.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar3.Text = "Custom 4";
+            this.gridControlUsers.DataMember = "usersdb_select_users_of_treasurer";
+            this.gridControlUsers.DataSource = this.sqlDataSource2;
+            this.gridControlUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControlUsers.Location = new System.Drawing.Point(0, 25);
+            this.gridControlUsers.MainView = this.gridView1;
+            this.gridControlUsers.Name = "gridControlUsers";
+            this.gridControlUsers.Size = new System.Drawing.Size(577, 433);
+            this.gridControlUsers.TabIndex = 10;
+            this.gridControlUsers.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.gridControlUsers.DoubleClick += new System.EventHandler(this.gridControlUsers_DoubleClick);
             // 
             // UsersOfTreasurer
             // 
@@ -435,8 +419,8 @@ namespace Treasurer2
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,18 +440,7 @@ namespace Treasurer2
         private System.Windows.Forms.ToolStripTextBox toolStripTextBoxSearch;
         private System.Windows.Forms.ToolStripButton toolStripButtonSearch;
         private DevExpress.XtraBars.StandaloneBarDockControl standaloneBarDockControl1;
-        private DevExpress.XtraGrid.GridControl gridControlUsers;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn coluser_id;
-        private DevExpress.XtraGrid.Columns.GridColumn colfirstname;
-        private DevExpress.XtraGrid.Columns.GridColumn collastname;
-        private DevExpress.XtraGrid.Columns.GridColumn colemail;
-        private DevExpress.XtraGrid.Columns.GridColumn colusername;
-        private DevExpress.XtraGrid.Columns.GridColumn colpassword;
-        private DevExpress.XtraGrid.Columns.GridColumn colpicture;
-        private DevExpress.XtraGrid.Columns.GridColumn colsex;
         private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraBars.Bar bar2;
         private DevExpress.XtraBars.BarToggleSwitchItem toggleSwitchDark;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
@@ -480,5 +453,15 @@ namespace Treasurer2
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
         private DevExpress.XtraBars.Bar bar1;
         private DevExpress.XtraBars.Bar bar3;
+        private DevExpress.XtraGrid.GridControl gridControlUsers;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn coluser_id;
+        private DevExpress.XtraGrid.Columns.GridColumn colfirstname;
+        private DevExpress.XtraGrid.Columns.GridColumn collastname;
+        private DevExpress.XtraGrid.Columns.GridColumn colemail;
+        private DevExpress.XtraGrid.Columns.GridColumn colusername;
+        private DevExpress.XtraGrid.Columns.GridColumn colpassword;
+        private DevExpress.XtraGrid.Columns.GridColumn colpicture;
+        private DevExpress.XtraGrid.Columns.GridColumn colsex;
     }
 }

@@ -30,14 +30,15 @@ namespace Treasurer2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsOfTreasurer));
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
-            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
-            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule4 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue4 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule5 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue5 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule6 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue6 = new DevExpress.XtraEditors.FormatConditionRuleValue();
             this.coldate_expire = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.colstock_quantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonAdd = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -49,17 +50,29 @@ namespace Treasurer2
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBoxSearch = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButtonSearch = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolstripPrintButton = new System.Windows.Forms.ToolStripButton();
             this.standaloneBarDockControl1 = new DevExpress.XtraBars.StandaloneBarDockControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersdbDataSet1 = new Treasurer2.usersdbDataSet1();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colproduct_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colpname = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colptype = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colquantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldate_manufactured = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colperson_responsible_for = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colimage = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colprice = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colperson_responsible_for = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.productTableAdapter = new Treasurer2.usersdbDataSet1TableAdapters.productTableAdapter();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.seeLogToolStripItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,18 +84,17 @@ namespace Treasurer2
             this.coldate_expire.OptionsColumn.AllowEdit = false;
             this.coldate_expire.OptionsColumn.ReadOnly = true;
             this.coldate_expire.Visible = true;
-            this.coldate_expire.VisibleIndex = 5;
-            this.coldate_expire.Width = 159;
+            this.coldate_expire.VisibleIndex = 6;
+            this.coldate_expire.Width = 124;
             // 
-            // sqlDataSource1
+            // colstock_quantity
             // 
-            this.sqlDataSource1.ConnectionName = "localhost_usersdb_Connection";
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "usersdb_select_product";
-            storedProcQuery1.StoredProcName = "usersdb.select_product";
-            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1});
-            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
+            this.colstock_quantity.Caption = "In stock";
+            this.colstock_quantity.FieldName = "stock_quantity";
+            this.colstock_quantity.Name = "colstock_quantity";
+            this.colstock_quantity.Visible = true;
+            this.colstock_quantity.VisibleIndex = 4;
+            this.colstock_quantity.Width = 85;
             // 
             // toolStrip1
             // 
@@ -96,7 +108,10 @@ namespace Treasurer2
             this.toolStripButtonRefresh,
             this.toolStripSeparator4,
             this.toolStripTextBoxSearch,
-            this.toolStripButtonSearch});
+            this.toolStripButtonSearch,
+            this.toolStripSeparator5,
+            this.toolstripPrintButton,
+            this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(581, 25);
@@ -165,7 +180,6 @@ namespace Treasurer2
             // 
             // toolStripTextBoxSearch
             // 
-            this.toolStripTextBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripTextBoxSearch.Name = "toolStripTextBoxSearch";
             this.toolStripTextBoxSearch.Size = new System.Drawing.Size(100, 25);
             // 
@@ -179,6 +193,21 @@ namespace Treasurer2
             this.toolStripButtonSearch.Text = "Хайх (Эд хөрөнгийн нэр, эд хөрөнгийн төрөл, хариуцах эзэн)";
             this.toolStripButtonSearch.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolstripPrintButton
+            // 
+            this.toolstripPrintButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolstripPrintButton.Image = ((System.Drawing.Image)(resources.GetObject("toolstripPrintButton.Image")));
+            this.toolstripPrintButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolstripPrintButton.Name = "toolstripPrintButton";
+            this.toolstripPrintButton.Size = new System.Drawing.Size(23, 22);
+            this.toolstripPrintButton.Text = "toolStripButton1";
+            this.toolstripPrintButton.Click += new System.EventHandler(this.toolStripButton1_Click_1);
+            // 
             // standaloneBarDockControl1
             // 
             this.standaloneBarDockControl1.CausesValidation = false;
@@ -191,8 +220,7 @@ namespace Treasurer2
             // 
             // gridControl1
             // 
-            this.gridControl1.DataMember = "usersdb_select_product";
-            this.gridControl1.DataSource = this.sqlDataSource1;
+            this.gridControl1.DataSource = this.productBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 25);
             this.gridControl1.MainView = this.gridView1;
@@ -203,32 +231,53 @@ namespace Treasurer2
             this.gridView1});
             this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "product";
+            this.productBindingSource.DataSource = this.usersdbDataSet1;
+            // 
+            // usersdbDataSet1
+            // 
+            this.usersdbDataSet1.DataSetName = "usersdbDataSet1";
+            this.usersdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colproduct_id,
             this.colpname,
             this.colptype,
+            this.colquantity,
+            this.colstock_quantity,
             this.coldate_manufactured,
             this.coldate_expire,
-            this.colperson_responsible_for,
-            this.colimage});
-            gridFormatRule1.Column = this.coldate_expire;
-            gridFormatRule1.ColumnApplyTo = this.coldate_expire;
-            gridFormatRule1.Name = "Format0";
-            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Greater;
-            formatConditionRuleValue1.PredefinedName = "Green Fill, Green Text";
-            formatConditionRuleValue1.Value1 = new System.DateTime(2021, 5, 14, 16, 8, 44, 0);
-            gridFormatRule1.Rule = formatConditionRuleValue1;
-            gridFormatRule2.Column = this.coldate_expire;
-            gridFormatRule2.ColumnApplyTo = this.coldate_expire;
-            gridFormatRule2.Name = "Format1";
-            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.LessOrEqual;
-            formatConditionRuleValue2.PredefinedName = "Red Fill, Red Text";
-            formatConditionRuleValue2.Value1 = new System.DateTime(2021, 5, 14, 16, 11, 28, 49);
-            gridFormatRule2.Rule = formatConditionRuleValue2;
-            this.gridView1.FormatRules.Add(gridFormatRule1);
-            this.gridView1.FormatRules.Add(gridFormatRule2);
+            this.colimage,
+            this.colprice,
+            this.colperson_responsible_for});
+            gridFormatRule4.Column = this.coldate_expire;
+            gridFormatRule4.ColumnApplyTo = this.coldate_expire;
+            gridFormatRule4.Name = "Format0";
+            formatConditionRuleValue4.Condition = DevExpress.XtraEditors.FormatCondition.Greater;
+            formatConditionRuleValue4.PredefinedName = "Green Fill, Green Text";
+            formatConditionRuleValue4.Value1 = true;
+            gridFormatRule4.Rule = formatConditionRuleValue4;
+            gridFormatRule5.Column = this.coldate_expire;
+            gridFormatRule5.ColumnApplyTo = this.coldate_expire;
+            gridFormatRule5.Name = "Format1";
+            formatConditionRuleValue5.Condition = DevExpress.XtraEditors.FormatCondition.LessOrEqual;
+            formatConditionRuleValue5.PredefinedName = "Red Fill, Red Text";
+            formatConditionRuleValue5.Value1 = new System.DateTime(2021, 5, 14, 16, 11, 28, 0);
+            gridFormatRule5.Rule = formatConditionRuleValue5;
+            gridFormatRule6.Column = this.colstock_quantity;
+            gridFormatRule6.ColumnApplyTo = this.colstock_quantity;
+            gridFormatRule6.Name = "In stock or not";
+            formatConditionRuleValue6.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue6.PredefinedName = "Red Bold Text";
+            formatConditionRuleValue6.Value1 = "0";
+            gridFormatRule6.Rule = formatConditionRuleValue6;
+            this.gridView1.FormatRules.Add(gridFormatRule4);
+            this.gridView1.FormatRules.Add(gridFormatRule5);
+            this.gridView1.FormatRules.Add(gridFormatRule6);
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowFooter = true;
@@ -246,7 +295,7 @@ namespace Treasurer2
             this.colproduct_id.OptionsColumn.ReadOnly = true;
             this.colproduct_id.Visible = true;
             this.colproduct_id.VisibleIndex = 0;
-            this.colproduct_id.Width = 101;
+            this.colproduct_id.Width = 51;
             // 
             // colpname
             // 
@@ -257,7 +306,7 @@ namespace Treasurer2
             this.colpname.OptionsColumn.ReadOnly = true;
             this.colpname.Visible = true;
             this.colpname.VisibleIndex = 1;
-            this.colpname.Width = 125;
+            this.colpname.Width = 117;
             // 
             // colptype
             // 
@@ -268,7 +317,16 @@ namespace Treasurer2
             this.colptype.OptionsColumn.ReadOnly = true;
             this.colptype.Visible = true;
             this.colptype.VisibleIndex = 2;
-            this.colptype.Width = 125;
+            this.colptype.Width = 80;
+            // 
+            // colquantity
+            // 
+            this.colquantity.Caption = "Quantity";
+            this.colquantity.FieldName = "quantity";
+            this.colquantity.Name = "colquantity";
+            this.colquantity.Visible = true;
+            this.colquantity.VisibleIndex = 3;
+            this.colquantity.Width = 81;
             // 
             // coldate_manufactured
             // 
@@ -278,19 +336,8 @@ namespace Treasurer2
             this.coldate_manufactured.OptionsColumn.AllowEdit = false;
             this.coldate_manufactured.OptionsColumn.ReadOnly = true;
             this.coldate_manufactured.Visible = true;
-            this.coldate_manufactured.VisibleIndex = 4;
-            this.coldate_manufactured.Width = 163;
-            // 
-            // colperson_responsible_for
-            // 
-            this.colperson_responsible_for.Caption = "Owner";
-            this.colperson_responsible_for.FieldName = "person_responsible_for";
-            this.colperson_responsible_for.Name = "colperson_responsible_for";
-            this.colperson_responsible_for.OptionsColumn.AllowEdit = false;
-            this.colperson_responsible_for.OptionsColumn.ReadOnly = true;
-            this.colperson_responsible_for.Visible = true;
-            this.colperson_responsible_for.VisibleIndex = 3;
-            this.colperson_responsible_for.Width = 156;
+            this.coldate_manufactured.VisibleIndex = 5;
+            this.coldate_manufactured.Width = 128;
             // 
             // colimage
             // 
@@ -300,8 +347,59 @@ namespace Treasurer2
             this.colimage.OptionsColumn.AllowEdit = false;
             this.colimage.OptionsColumn.ReadOnly = true;
             this.colimage.Visible = true;
-            this.colimage.VisibleIndex = 6;
-            this.colimage.Width = 189;
+            this.colimage.VisibleIndex = 7;
+            this.colimage.Width = 125;
+            // 
+            // colprice
+            // 
+            this.colprice.Caption = "Price";
+            this.colprice.FieldName = "price";
+            this.colprice.Name = "colprice";
+            this.colprice.Visible = true;
+            this.colprice.VisibleIndex = 8;
+            this.colprice.Width = 85;
+            // 
+            // colperson_responsible_for
+            // 
+            this.colperson_responsible_for.Caption = "Owner";
+            this.colperson_responsible_for.FieldName = "person_responsible_for";
+            this.colperson_responsible_for.Name = "colperson_responsible_for";
+            this.colperson_responsible_for.OptionsColumn.AllowEdit = false;
+            this.colperson_responsible_for.OptionsColumn.ReadOnly = true;
+            this.colperson_responsible_for.Visible = true;
+            this.colperson_responsible_for.VisibleIndex = 9;
+            this.colperson_responsible_for.Width = 140;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.seeLogToolStripItem,
+            this.addLogToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(29, 22);
+            this.toolStripDropDownButton1.Text = "toolStripDropDownButton1";
+            // 
+            // seeLogToolStripItem
+            // 
+            this.seeLogToolStripItem.Image = ((System.Drawing.Image)(resources.GetObject("seeLogToolStripItem.Image")));
+            this.seeLogToolStripItem.Name = "seeLogToolStripItem";
+            this.seeLogToolStripItem.Size = new System.Drawing.Size(180, 22);
+            this.seeLogToolStripItem.Text = "Бүртгэл харах";
+            this.seeLogToolStripItem.Click += new System.EventHandler(this.addLogToolStripMenuItem_Click);
+            // 
+            // addLogToolStripMenuItem
+            // 
+            this.addLogToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addLogToolStripMenuItem.Image")));
+            this.addLogToolStripMenuItem.Name = "addLogToolStripMenuItem";
+            this.addLogToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addLogToolStripMenuItem.Text = "Бүртгэл нэмэх";
             // 
             // ProductsOfTreasurer
             // 
@@ -315,6 +413,8 @@ namespace Treasurer2
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -322,7 +422,6 @@ namespace Treasurer2
         }
 
         #endregion
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButtonAdd;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -344,5 +443,16 @@ namespace Treasurer2
         private DevExpress.XtraGrid.Columns.GridColumn coldate_expire;
         private DevExpress.XtraGrid.Columns.GridColumn colperson_responsible_for;
         private DevExpress.XtraGrid.Columns.GridColumn colimage;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton toolstripPrintButton;
+        private DevExpress.XtraGrid.Columns.GridColumn colprice;
+        private DevExpress.XtraGrid.Columns.GridColumn colstock_quantity;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private usersdbDataSet1 usersdbDataSet1;
+        private DevExpress.XtraGrid.Columns.GridColumn colquantity;
+        private usersdbDataSet1TableAdapters.productTableAdapter productTableAdapter;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem seeLogToolStripItem;
+        private System.Windows.Forms.ToolStripMenuItem addLogToolStripMenuItem;
     }
 }

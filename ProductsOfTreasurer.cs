@@ -61,8 +61,11 @@ namespace Treasurer2
             }
             if(gridView1.FocusedColumn.FieldName == "person_responsible_for")
             {
+                
                 string username = Convert.ToString(gridView1.GetFocusedRowCellValue(colperson_responsible_for));
                 UsersInfoFormDataset(username);
+                
+                
             }
             
         }
@@ -197,7 +200,7 @@ namespace Treasurer2
         #endregion
 
 
-        #region toolStripButton1_Click
+        #region toolStripSearchButton_Click
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             if(toolStripTextBoxSearch.Text != "")
@@ -224,5 +227,22 @@ namespace Treasurer2
         }
         #endregion
 
+
+        #region toolStripPrintButton_Click
+        private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+            if ((gridView1.FocusedColumn.FieldName == "pname") ||
+               (gridView1.FocusedColumn.FieldName == "ptype"))
+            {
+                string pid = Convert.ToString(gridView1.GetFocusedRowCellValue(colproduct_id));
+            }
+        }
+        #endregion
+
+        private void addLogToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductLogForm productLForm = new ProductLogForm();
+            productLForm.Show(this);
+        }
     }
 }

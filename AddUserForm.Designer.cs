@@ -48,6 +48,7 @@ namespace Treasurer2
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButtonTakePhoto = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxEmail.Properties)).BeginInit();
@@ -117,7 +118,7 @@ namespace Treasurer2
             this.uploadPictureButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("uploadPictureButton.ImageOptions.SvgImage")));
             this.uploadPictureButton.Location = new System.Drawing.Point(151, 372);
             this.uploadPictureButton.Name = "uploadPictureButton";
-            this.uploadPictureButton.Size = new System.Drawing.Size(230, 27);
+            this.uploadPictureButton.Size = new System.Drawing.Size(118, 40);
             this.uploadPictureButton.TabIndex = 24;
             this.uploadPictureButton.Text = "Upload image";
             this.uploadPictureButton.Click += new System.EventHandler(this.uploadPictureButton_Click);
@@ -218,11 +219,22 @@ namespace Treasurer2
             this.labelControl7.TabIndex = 64;
             this.labelControl7.Text = "Хүйс:";
             // 
+            // simpleButtonTakePhoto
+            // 
+            this.simpleButtonTakePhoto.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButtonTakePhoto.Location = new System.Drawing.Point(275, 372);
+            this.simpleButtonTakePhoto.Name = "simpleButtonTakePhoto";
+            this.simpleButtonTakePhoto.Size = new System.Drawing.Size(106, 40);
+            this.simpleButtonTakePhoto.TabIndex = 66;
+            this.simpleButtonTakePhoto.Text = "Take";
+            this.simpleButtonTakePhoto.Click += new System.EventHandler(this.simpleButtonTakePhoto_Click);
+            // 
             // AddUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(399, 466);
+            this.Controls.Add(this.simpleButtonTakePhoto);
             this.Controls.Add(this.radioGroup1);
             this.Controls.Add(this.labelControl7);
             this.Controls.Add(this.textBoxPassword);
@@ -278,5 +290,6 @@ namespace Treasurer2
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         internal DevExpress.XtraEditors.RadioGroup radioGroup1;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonTakePhoto;
     }
 }

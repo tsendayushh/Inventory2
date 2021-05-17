@@ -121,5 +121,11 @@ namespace Treasurer2
             return sex;
         }
         #endregion
+
+        private void simpleButtonTakePhoto_Click(object sender, EventArgs e)
+        {
+            TakePictureForm takePictureForm = new TakePictureForm();
+            takePictureForm.Show(this);
+        }
     }
 }

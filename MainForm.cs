@@ -92,5 +92,37 @@ namespace Treasurer2
         }
         #endregion
 
+
+        #region accThemesAndSkins_Click
+        private void accThemesAndSkins_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!containerMainform.Controls.Contains(ThemeAndSkin.Instance))
+                {
+                    containerMainform.Controls.Add(ThemeAndSkin.Instance);
+                    ThemeAndSkin.Instance.Dock = DockStyle.Fill;
+                    ThemeAndSkin.Instance.BringToFront();
+                }
+                ThemeAndSkin.Instance.BringToFront();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
+        private void accPrintProduct_Click(object sender, EventArgs e)
+        {
+            PrintProductForm printProductForm = new PrintProductForm();
+            printProductForm.Show(this);
+        }
+
+        private void accProductLog_Click(object sender, EventArgs e)
+        {
+            ProductLogForm productLForm = new ProductLogForm();
+            productLForm.Show(this);
+        }
     }
 }

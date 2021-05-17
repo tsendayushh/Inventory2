@@ -37,6 +37,8 @@ namespace Treasurer2
             this.aceProducts = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accAddProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accEditProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accProductLog = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.accPrintProduct = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
             this.aceUsers = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accAddUser = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -45,6 +47,7 @@ namespace Treasurer2
             this.accUser = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accExit = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator5 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
+            this.accThemesAndSkins = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.accordionControlElement2 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -58,7 +61,7 @@ namespace Treasurer2
             this.containerMainform.Dock = System.Windows.Forms.DockStyle.Fill;
             this.containerMainform.Location = new System.Drawing.Point(237, 30);
             this.containerMainform.Name = "containerMainform";
-            this.containerMainform.Size = new System.Drawing.Size(563, 497);
+            this.containerMainform.Size = new System.Drawing.Size(561, 496);
             this.containerMainform.TabIndex = 0;
             // 
             // accordionControl1
@@ -66,11 +69,12 @@ namespace Treasurer2
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1,
-            this.accordionControlSeparator5});
+            this.accordionControlSeparator5,
+            this.accThemesAndSkins});
             this.accordionControl1.Location = new System.Drawing.Point(0, 30);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(237, 497);
+            this.accordionControl1.Size = new System.Drawing.Size(237, 496);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -91,7 +95,9 @@ namespace Treasurer2
             // 
             this.aceProducts.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accAddProduct,
-            this.accEditProduct});
+            this.accEditProduct,
+            this.accProductLog,
+            this.accPrintProduct});
             this.aceProducts.Expanded = true;
             this.aceProducts.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("aceProducts.ImageOptions.SvgImage")));
             this.aceProducts.Name = "aceProducts";
@@ -113,6 +119,22 @@ namespace Treasurer2
             this.accEditProduct.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accEditProduct.Text = "Засварлах";
             this.accEditProduct.Click += new System.EventHandler(this.accEditProduct_Click);
+            // 
+            // accProductLog
+            // 
+            this.accProductLog.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accProductLog.ImageOptions.SvgImage")));
+            this.accProductLog.Name = "accProductLog";
+            this.accProductLog.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accProductLog.Text = "Бүртгэл";
+            this.accProductLog.Click += new System.EventHandler(this.accProductLog_Click);
+            // 
+            // accPrintProduct
+            // 
+            this.accPrintProduct.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accPrintProduct.ImageOptions.SvgImage")));
+            this.accPrintProduct.Name = "accPrintProduct";
+            this.accPrintProduct.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accPrintProduct.Text = "Хэвлэх";
+            this.accPrintProduct.Click += new System.EventHandler(this.accPrintProduct_Click);
             // 
             // accordionControlSeparator1
             // 
@@ -169,13 +191,21 @@ namespace Treasurer2
             // 
             this.accordionControlSeparator5.Name = "accordionControlSeparator5";
             // 
+            // accThemesAndSkins
+            // 
+            this.accThemesAndSkins.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("accThemesAndSkins.ImageOptions.SvgImage")));
+            this.accThemesAndSkins.Name = "accThemesAndSkins";
+            this.accThemesAndSkins.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.accThemesAndSkins.Text = "Themes and Skins";
+            this.accThemesAndSkins.Click += new System.EventHandler(this.accThemesAndSkins_Click);
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Manager = this.fluentFormDefaultManager1;
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(800, 30);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(798, 30);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -195,7 +225,7 @@ namespace Treasurer2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 527);
+            this.ClientSize = new System.Drawing.Size(798, 526);
             this.ControlContainer = this.containerMainform;
             this.Controls.Add(this.containerMainform);
             this.Controls.Add(this.accordionControl1);
@@ -214,7 +244,6 @@ namespace Treasurer2
         }
 
         #endregion
-        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer containerMainform;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
@@ -231,5 +260,9 @@ namespace Treasurer2
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator1;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator4;
         private DevExpress.XtraBars.Navigation.AccordionControlSeparator accordionControlSeparator5;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accThemesAndSkins;
+        internal DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer containerMainform;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accPrintProduct;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement accProductLog;
     }
 }
