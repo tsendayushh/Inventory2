@@ -112,15 +112,78 @@ namespace Treasurer2
             AddProductForm addPForm = new AddProductForm();
             addPForm.Show(this);
         }
+<<<<<<< HEAD
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             if ((gridView1.FocusedColumn.FieldName == "pname") ||
                (gridView1.FocusedColumn.FieldName == "ptype"))
+=======
+        #endregion
+
+
+        #region   ButtonEditEvent
+        private void toolStripButtonEdit_Click(object sender, EventArgs e)
+        {
+            if (gridView1.GetFocusedRowCellValue(colproduct_id) != null)
+>>>>>>> parent of 16dc791 (product iig awah bolon butsaah log toi table uusgej zeeleh bolon butsaah uildeltei mun tvvniig bvrtgedg form hiisn)
             {
                 string pid = Convert.ToString(gridView1.GetFocusedRowCellValue(colproduct_id));
                 UpdatePFormDataSet(pid);
             }
         }
+<<<<<<< HEAD
+=======
+        #endregion
+
+
+        #region toolStripButtonRefresh_Click
+        private void toolStripButtonRefresh_Click(object sender, EventArgs e)
+        {
+            toolStripTextBoxSearch.Text = "";
+            MySqlCommand command = new MySqlCommand("SELECT * FROM usersdb.product;", db.getConnection());
+            refreshGridview(command);
+
+        }
+        #endregion
+
+
+        #region refreshGridview
+        public void refreshGridview(MySqlCommand command)
+        {
+            DataTable table = db.getDataTable(command);
+            gridControl1.DataSource = table;
+        }
+        #endregion
+
+
+        #region toolStripButton1_Click
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            if(toolStripTextBoxSearch.Text != "")
+            {
+                string searchInput = toolStripTextBoxSearch.Text;
+
+                MySqlCommand command = new MySqlCommand("CALL `usersdb`.`search_product_by_id_pn_pt_prf`('%" + searchInput + "%');", db.getConnection());
+
+                DataTable table = db.getDataTable(command);
+                
+                if (table.Rows.Count > 0)
+                {
+                    gridControl1.DataSource = table;
+
+                    db.closeConnection();
+                }
+                else
+                {
+                    MessageBox.Show("'" + searchInput + "' утгатай хайлтын илэрц олдсонгүй", "Олдсонгүй", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    db.closeConnection();
+                }
+                
+            }
+        }
+        #endregion
+
+>>>>>>> parent of 16dc791 (product iig awah bolon butsaah log toi table uusgej zeeleh bolon butsaah uildeltei mun tvvniig bvrtgedg form hiisn)
     }
 }

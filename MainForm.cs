@@ -51,6 +51,19 @@ namespace Treasurer2
             UpdateProductForm updatePForm = new UpdateProductForm();
             updatePForm.Show(this);
 
+<<<<<<< HEAD
         }
+=======
+        #region accExit_Click
+        private void accExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Та гарахдаа итгэлтэй байна уу?", "Гарах", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Close();
+            }
+        }
+        #endregion
+
+>>>>>>> parent of 16dc791 (product iig awah bolon butsaah log toi table uusgej zeeleh bolon butsaah uildeltei mun tvvniig bvrtgedg form hiisn)
     }
 }

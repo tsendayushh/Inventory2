@@ -38,7 +38,16 @@ namespace Treasurer2
             this.labelLastname = new DevExpress.XtraEditors.LabelControl();
             this.labelEmailAddress = new DevExpress.XtraEditors.LabelControl();
             this.labelUsername = new DevExpress.XtraEditors.LabelControl();
+<<<<<<< HEAD
+=======
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.gaugeControl1 = new DevExpress.XtraGauges.Win.GaugeControl();
+            this.digitalGauge1 = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalGauge();
+            this.digitalBackgroundLayerComponent1 = new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent();
+>>>>>>> parent of 16dc791 (product iig awah bolon butsaah log toi table uusgej zeeleh bolon butsaah uildeltei mun tvvniig bvrtgedg form hiisn)
             ((System.ComponentModel.ISupportInitialize)(this.pictureOfUser.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.digitalGauge1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.digitalBackgroundLayerComponent1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl7
@@ -62,7 +71,11 @@ namespace Treasurer2
             // labelControl2
             // 
             this.labelControl2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+<<<<<<< HEAD
             this.labelControl2.Location = new System.Drawing.Point(40, 305);
+=======
+            this.labelControl2.Location = new System.Drawing.Point(40, 497);
+>>>>>>> parent of 16dc791 (product iig awah bolon butsaah log toi table uusgej zeeleh bolon butsaah uildeltei mun tvvniig bvrtgedg form hiisn)
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(69, 14);
             this.labelControl2.TabIndex = 47;
@@ -71,7 +84,11 @@ namespace Treasurer2
             // labelControl1
             // 
             this.labelControl1.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+<<<<<<< HEAD
             this.labelControl1.Location = new System.Drawing.Point(27, 266);
+=======
+            this.labelControl1.Location = new System.Drawing.Point(27, 458);
+>>>>>>> parent of 16dc791 (product iig awah bolon butsaah log toi table uusgej zeeleh bolon butsaah uildeltei mun tvvniig bvrtgedg form hiisn)
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(82, 14);
             this.labelControl1.TabIndex = 46;
@@ -99,7 +116,11 @@ namespace Treasurer2
             // labelLastname
             // 
             this.labelLastname.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+<<<<<<< HEAD
             this.labelLastname.Location = new System.Drawing.Point(115, 266);
+=======
+            this.labelLastname.Location = new System.Drawing.Point(115, 458);
+>>>>>>> parent of 16dc791 (product iig awah bolon butsaah log toi table uusgej zeeleh bolon butsaah uildeltei mun tvvniig bvrtgedg form hiisn)
             this.labelLastname.Name = "labelLastname";
             this.labelLastname.Size = new System.Drawing.Size(110, 14);
             this.labelLastname.TabIndex = 57;
@@ -108,7 +129,11 @@ namespace Treasurer2
             // labelEmailAddress
             // 
             this.labelEmailAddress.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+<<<<<<< HEAD
             this.labelEmailAddress.Location = new System.Drawing.Point(115, 305);
+=======
+            this.labelEmailAddress.Location = new System.Drawing.Point(115, 497);
+>>>>>>> parent of 16dc791 (product iig awah bolon butsaah log toi table uusgej zeeleh bolon butsaah uildeltei mun tvvniig bvrtgedg form hiisn)
             this.labelEmailAddress.Name = "labelEmailAddress";
             this.labelEmailAddress.Size = new System.Drawing.Size(110, 14);
             this.labelEmailAddress.TabIndex = 58;
@@ -123,11 +148,58 @@ namespace Treasurer2
             this.labelUsername.TabIndex = 59;
             this.labelUsername.Text = "Бүртгэлийн дугаар:";
             // 
+<<<<<<< HEAD
+=======
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.richTextBox1.Location = new System.Drawing.Point(115, 22);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(143, 405);
+            this.richTextBox1.TabIndex = 60;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
+            // gaugeControl1
+            // 
+            this.gaugeControl1.AutoLayout = false;
+            this.gaugeControl1.Gauges.AddRange(new DevExpress.XtraGauges.Base.IGauge[] {
+            this.digitalGauge1});
+            this.gaugeControl1.Location = new System.Drawing.Point(305, 99);
+            this.gaugeControl1.Name = "gaugeControl1";
+            this.gaugeControl1.Size = new System.Drawing.Size(250, 105);
+            this.gaugeControl1.TabIndex = 61;
+            // 
+            // digitalGauge1
+            // 
+            this.digitalGauge1.AppearanceOff.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:#00FFFFFF");
+            this.digitalGauge1.AppearanceOn.ContentBrush = new DevExpress.XtraGauges.Core.Drawing.SolidBrushObject("Color:WhiteSmoke");
+            this.digitalGauge1.BackgroundLayers.AddRange(new DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent[] {
+            this.digitalBackgroundLayerComponent1});
+            this.digitalGauge1.Bounds = new System.Drawing.Rectangle(6, 6, 245, 92);
+            this.digitalGauge1.DigitCount = 5;
+            this.digitalGauge1.Name = "digitalGauge1";
+            this.digitalGauge1.Text = "00,000";
+            // 
+            // digitalBackgroundLayerComponent1
+            // 
+            this.digitalBackgroundLayerComponent1.BottomRight = new DevExpress.XtraGauges.Core.Base.PointF2D(259.8125F, 99.9625F);
+            this.digitalBackgroundLayerComponent1.Name = "digitalBackgroundLayerComponent10";
+            this.digitalBackgroundLayerComponent1.ShapeType = DevExpress.XtraGauges.Core.Model.DigitalBackgroundShapeSetType.Style8;
+            this.digitalBackgroundLayerComponent1.TopLeft = new DevExpress.XtraGauges.Core.Base.PointF2D(20F, 0F);
+            this.digitalBackgroundLayerComponent1.ZOrder = 1000;
+            // 
+>>>>>>> parent of 16dc791 (product iig awah bolon butsaah log toi table uusgej zeeleh bolon butsaah uildeltei mun tvvniig bvrtgedg form hiisn)
             // UsersInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(281, 380);
+=======
+            this.ClientSize = new System.Drawing.Size(693, 520);
+            this.Controls.Add(this.gaugeControl1);
+            this.Controls.Add(this.richTextBox1);
+>>>>>>> parent of 16dc791 (product iig awah bolon butsaah log toi table uusgej zeeleh bolon butsaah uildeltei mun tvvniig bvrtgedg form hiisn)
             this.Controls.Add(this.labelUsername);
             this.Controls.Add(this.labelEmailAddress);
             this.Controls.Add(this.labelLastname);
@@ -142,6 +214,8 @@ namespace Treasurer2
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UsersInfoForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureOfUser.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.digitalGauge1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.digitalBackgroundLayerComponent1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,5 +232,12 @@ namespace Treasurer2
         internal DevExpress.XtraEditors.LabelControl labelLastname;
         internal DevExpress.XtraEditors.LabelControl labelEmailAddress;
         internal DevExpress.XtraEditors.LabelControl labelUsername;
+<<<<<<< HEAD
+=======
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private DevExpress.XtraGauges.Win.GaugeControl gaugeControl1;
+        private DevExpress.XtraGauges.Win.Gauges.Digital.DigitalGauge digitalGauge1;
+        private DevExpress.XtraGauges.Win.Gauges.Digital.DigitalBackgroundLayerComponent digitalBackgroundLayerComponent1;
+>>>>>>> parent of 16dc791 (product iig awah bolon butsaah log toi table uusgej zeeleh bolon butsaah uildeltei mun tvvniig bvrtgedg form hiisn)
     }
 }
