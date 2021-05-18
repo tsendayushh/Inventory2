@@ -47,6 +47,10 @@ namespace Treasurer2
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.glueCategory = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.textEditQuantity = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.textEditPrice = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxProductName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEditManufactured.Properties.CalendarTimeProperties)).BeginInit();
@@ -57,6 +61,8 @@ namespace Treasurer2
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.glueCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditQuantity.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxProductName
@@ -68,7 +74,7 @@ namespace Treasurer2
             // 
             // pictureEdit
             // 
-            this.pictureEdit.Location = new System.Drawing.Point(151, 201);
+            this.pictureEdit.Location = new System.Drawing.Point(151, 295);
             this.pictureEdit.Name = "pictureEdit";
             this.pictureEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.StretchVertical;
@@ -96,7 +102,7 @@ namespace Treasurer2
             // uploadPictureButton
             // 
             this.uploadPictureButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("uploadPictureButton.ImageOptions.SvgImage")));
-            this.uploadPictureButton.Location = new System.Drawing.Point(151, 331);
+            this.uploadPictureButton.Location = new System.Drawing.Point(151, 425);
             this.uploadPictureButton.Name = "uploadPictureButton";
             this.uploadPictureButton.Size = new System.Drawing.Size(230, 27);
             this.uploadPictureButton.TabIndex = 9;
@@ -180,7 +186,7 @@ namespace Treasurer2
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.labelControl6.Appearance.Options.UseForeColor = true;
             this.labelControl6.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.labelControl6.Location = new System.Drawing.Point(111, 242);
+            this.labelControl6.Location = new System.Drawing.Point(111, 336);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(34, 14);
             this.labelControl6.TabIndex = 17;
@@ -188,7 +194,7 @@ namespace Treasurer2
             // 
             // simpleButtonAdd
             // 
-            this.simpleButtonAdd.Location = new System.Drawing.Point(39, 378);
+            this.simpleButtonAdd.Location = new System.Drawing.Point(39, 472);
             this.simpleButtonAdd.Name = "simpleButtonAdd";
             this.simpleButtonAdd.Size = new System.Drawing.Size(131, 34);
             this.simpleButtonAdd.TabIndex = 18;
@@ -197,7 +203,7 @@ namespace Treasurer2
             // 
             // simpleButtonCancel
             // 
-            this.simpleButtonCancel.Location = new System.Drawing.Point(226, 378);
+            this.simpleButtonCancel.Location = new System.Drawing.Point(226, 472);
             this.simpleButtonCancel.Name = "simpleButtonCancel";
             this.simpleButtonCancel.Size = new System.Drawing.Size(131, 34);
             this.simpleButtonCancel.TabIndex = 19;
@@ -242,6 +248,42 @@ namespace Treasurer2
             this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.labelControl7.Appearance.Options.UseForeColor = true;
+            this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.labelControl7.Location = new System.Drawing.Point(76, 218);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(69, 14);
+            this.labelControl7.TabIndex = 24;
+            this.labelControl7.Text = "Тоо ширхэг:";
+            // 
+            // textEditQuantity
+            // 
+            this.textEditQuantity.Location = new System.Drawing.Point(151, 215);
+            this.textEditQuantity.Name = "textEditQuantity";
+            this.textEditQuantity.Size = new System.Drawing.Size(231, 20);
+            this.textEditQuantity.TabIndex = 23;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.labelControl8.Appearance.Options.UseForeColor = true;
+            this.labelControl8.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
+            this.labelControl8.Location = new System.Drawing.Point(56, 259);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(89, 14);
+            this.labelControl8.TabIndex = 26;
+            this.labelControl8.Text = "Ширхэгийн үнэ:";
+            // 
+            // textEditPrice
+            // 
+            this.textEditPrice.Location = new System.Drawing.Point(151, 253);
+            this.textEditPrice.Name = "textEditPrice";
+            this.textEditPrice.Size = new System.Drawing.Size(231, 20);
+            this.textEditPrice.TabIndex = 25;
+            // 
             // AddProductForm
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
@@ -250,7 +292,11 @@ namespace Treasurer2
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 426);
+            this.ClientSize = new System.Drawing.Size(409, 515);
+            this.Controls.Add(this.labelControl8);
+            this.Controls.Add(this.textEditPrice);
+            this.Controls.Add(this.labelControl7);
+            this.Controls.Add(this.textEditQuantity);
             this.Controls.Add(this.glueCategory);
             this.Controls.Add(this.glueOwner);
             this.Controls.Add(this.simpleButtonCancel);
@@ -281,6 +327,8 @@ namespace Treasurer2
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.glueCategory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditQuantity.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditPrice.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +353,9 @@ namespace Treasurer2
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
         private DevExpress.XtraEditors.GridLookUpEdit glueCategory;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.TextEdit textEditQuantity;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.TextEdit textEditPrice;
     }
 }

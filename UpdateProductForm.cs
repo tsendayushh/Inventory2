@@ -41,7 +41,9 @@ namespace Treasurer2
                 ((DateTime)dateEditManufactured.DateTime == null) ||
                 ((DateTime)dateEditExpire.DateTime == null) ||
                 (glueOwner.Text.Trim() == "") ||
-                (pictureEdit.Image == null))
+                (pictureEdit.Image == null) ||
+                (textEditQuantity.Text == "") ||
+                (textEditPrice.Text == ""))
             {
                 return false;
             }
@@ -66,12 +68,15 @@ namespace Treasurer2
             MemoryStream image = new MemoryStream();
 
 
+            int quantity = Convert.ToInt32(textEditQuantity.Text);
+            int price = Convert.ToInt32(textEditPrice.Text);
+
 
             if (verif())
             {
                 pictureEdit.Image.Save(image, pictureEdit.Image.RawFormat);
 
-                if (product.updateProduct(id, pName, pType, mDate, eDate, owner, image))
+                if (product.updateProduct(id, pName, pType, mDate, eDate, owner, image, quantity, price))
                 {
                     MessageBox.Show("Мэдээлэл засварлалт амжилттай боллоо.", "Засварлах", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -144,7 +149,7 @@ namespace Treasurer2
         private void simpleButtonSearchByID_Click(object sender, EventArgs e)
         {
             // id gaar ni product haih uildel
-            string id = textEditID.Text;
+            int  id = Convert.ToInt32( textEditID.Text);
 
             DataTable table = product.getProductByID(id);
             if(table.Rows.Count > 0)

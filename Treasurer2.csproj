@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accessibility" />
     <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
       <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
     </Reference>
@@ -83,11 +84,17 @@
     <Reference Include="DevExpress.XtraVerticalGrid.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -182,6 +189,12 @@
     <Compile Include="UpdateProductForm.Designer.cs">
       <DependentUpon>UpdateProductForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateProductLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProductLogForm.Designer.cs">
+      <DependentUpon>UpdateProductLogForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateUserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +216,26 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>usersdbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="usersdbDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usersdbDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="usersdbDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usersdbDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="usersdbDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usersdbDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="usersdbDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>usersdbDataSet6.xsd</DependentUpon>
     </Compile>
     <Compile Include="UsersInfoForm.cs">
       <SubType>Form</SubType>
@@ -266,6 +299,9 @@
     <EmbeddedResource Include="UpdateProductForm.resx">
       <DependentUpon>UpdateProductForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateProductLogForm.resx">
+      <DependentUpon>UpdateProductLogForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateUserForm.resx">
       <DependentUpon>UpdateUserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +353,50 @@
     </None>
     <None Include="usersdbDataSet2.xss">
       <DependentUpon>usersdbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="usersdbDataSet3.xsc">
+      <DependentUpon>usersdbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="usersdbDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usersdbDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usersdbDataSet3.xss">
+      <DependentUpon>usersdbDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="usersdbDataSet4.xsc">
+      <DependentUpon>usersdbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="usersdbDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usersdbDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usersdbDataSet4.xss">
+      <DependentUpon>usersdbDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="usersdbDataSet5.xsc">
+      <DependentUpon>usersdbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="usersdbDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usersdbDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usersdbDataSet5.xss">
+      <DependentUpon>usersdbDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="usersdbDataSet6.xsc">
+      <DependentUpon>usersdbDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="usersdbDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>usersdbDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="usersdbDataSet6.xss">
+      <DependentUpon>usersdbDataSet6.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

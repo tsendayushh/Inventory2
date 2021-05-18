@@ -20,17 +20,17 @@ namespace Treasurer2 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("usersdbDataSet2")]
+    [global::System.Xml.Serialization.XmlRootAttribute("usersdbDataSet5")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class usersdbDataSet2 : global::System.Data.DataSet {
+    public partial class usersdbDataSet5 : global::System.Data.DataSet {
         
-        private product_logDataTable tableproduct_log;
+        private product_owningDataTable tableproduct_owning;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public usersdbDataSet2() {
+        public usersdbDataSet5() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Treasurer2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected usersdbDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected usersdbDataSet5(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Treasurer2 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["product_log"] != null)) {
-                    base.Tables.Add(new product_logDataTable(ds.Tables["product_log"]));
+                if ((ds.Tables["product_owning"] != null)) {
+                    base.Tables.Add(new product_owningDataTable(ds.Tables["product_owning"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Treasurer2 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public product_logDataTable product_log {
+        public product_owningDataTable product_owning {
             get {
-                return this.tableproduct_log;
+                return this.tableproduct_owning;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Treasurer2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            usersdbDataSet2 cln = ((usersdbDataSet2)(base.Clone()));
+            usersdbDataSet5 cln = ((usersdbDataSet5)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Treasurer2 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["product_log"] != null)) {
-                    base.Tables.Add(new product_logDataTable(ds.Tables["product_log"]));
+                if ((ds.Tables["product_owning"] != null)) {
+                    base.Tables.Add(new product_owningDataTable(ds.Tables["product_owning"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Treasurer2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableproduct_log = ((product_logDataTable)(base.Tables["product_log"]));
+            this.tableproduct_owning = ((product_owningDataTable)(base.Tables["product_owning"]));
             if ((initTable == true)) {
-                if ((this.tableproduct_log != null)) {
-                    this.tableproduct_log.InitVars();
+                if ((this.tableproduct_owning != null)) {
+                    this.tableproduct_owning.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Treasurer2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "usersdbDataSet2";
+            this.DataSetName = "usersdbDataSet5";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/usersdbDataSet2.xsd";
+            this.Namespace = "http://tempuri.org/usersdbDataSet5.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableproduct_log = new product_logDataTable();
-            base.Tables.Add(this.tableproduct_log);
+            this.tableproduct_owning = new product_owningDataTable();
+            base.Tables.Add(this.tableproduct_owning);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeproduct_log() {
+        private bool ShouldSerializeproduct_owning() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Treasurer2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            usersdbDataSet2 ds = new usersdbDataSet2();
+            usersdbDataSet5 ds = new usersdbDataSet5();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,31 +270,29 @@ namespace Treasurer2 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void product_logRowChangeEventHandler(object sender, product_logRowChangeEvent e);
+        public delegate void product_owningRowChangeEventHandler(object sender, product_owningRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class product_logDataTable : global::System.Data.TypedTableBase<product_logRow> {
+        public partial class product_owningDataTable : global::System.Data.TypedTableBase<product_owningRow> {
             
-            private global::System.Data.DataColumn columnproduct_log_id;
+            private global::System.Data.DataColumn columnowning_id;
             
             private global::System.Data.DataColumn columnproduct_id;
             
-            private global::System.Data.DataColumn columnlog_date;
-            
-            private global::System.Data.DataColumn columnin_or_out;
+            private global::System.Data.DataColumn columnproduct_name;
             
             private global::System.Data.DataColumn columnquantity;
             
-            private global::System.Data.DataColumn columnborrowers_username;
+            private global::System.Data.DataColumn columnowner_username;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public product_logDataTable() {
-                this.TableName = "product_log";
+            public product_owningDataTable() {
+                this.TableName = "product_owning";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +300,7 @@ namespace Treasurer2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal product_logDataTable(global::System.Data.DataTable table) {
+            internal product_owningDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,16 +317,16 @@ namespace Treasurer2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected product_logDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected product_owningDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn product_log_idColumn {
+            public global::System.Data.DataColumn owning_idColumn {
                 get {
-                    return this.columnproduct_log_id;
+                    return this.columnowning_id;
                 }
             }
             
@@ -342,17 +340,9 @@ namespace Treasurer2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn log_dateColumn {
+            public global::System.Data.DataColumn product_nameColumn {
                 get {
-                    return this.columnlog_date;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn in_or_outColumn {
-                get {
-                    return this.columnin_or_out;
+                    return this.columnproduct_name;
                 }
             }
             
@@ -366,9 +356,9 @@ namespace Treasurer2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn borrowers_usernameColumn {
+            public global::System.Data.DataColumn owner_usernameColumn {
                 get {
-                    return this.columnborrowers_username;
+                    return this.columnowner_username;
                 }
             }
             
@@ -383,57 +373,56 @@ namespace Treasurer2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public product_logRow this[int index] {
+            public product_owningRow this[int index] {
                 get {
-                    return ((product_logRow)(this.Rows[index]));
+                    return ((product_owningRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event product_logRowChangeEventHandler product_logRowChanging;
+            public event product_owningRowChangeEventHandler product_owningRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event product_logRowChangeEventHandler product_logRowChanged;
+            public event product_owningRowChangeEventHandler product_owningRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event product_logRowChangeEventHandler product_logRowDeleting;
+            public event product_owningRowChangeEventHandler product_owningRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event product_logRowChangeEventHandler product_logRowDeleted;
+            public event product_owningRowChangeEventHandler product_owningRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Addproduct_logRow(product_logRow row) {
+            public void Addproduct_owningRow(product_owningRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public product_logRow Addproduct_logRow(int product_id, System.DateTime log_date, string in_or_out, int quantity, string borrowers_username) {
-                product_logRow rowproduct_logRow = ((product_logRow)(this.NewRow()));
+            public product_owningRow Addproduct_owningRow(string product_id, string product_name, int quantity, string owner_username) {
+                product_owningRow rowproduct_owningRow = ((product_owningRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         product_id,
-                        log_date,
-                        in_or_out,
+                        product_name,
                         quantity,
-                        borrowers_username};
-                rowproduct_logRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowproduct_logRow);
-                return rowproduct_logRow;
+                        owner_username};
+                rowproduct_owningRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowproduct_owningRow);
+                return rowproduct_owningRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public product_logRow FindByproduct_log_id(int product_log_id) {
-                return ((product_logRow)(this.Rows.Find(new object[] {
-                            product_log_id})));
+            public product_owningRow FindByowning_id(int owning_id) {
+                return ((product_owningRow)(this.Rows.Find(new object[] {
+                            owning_id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                product_logDataTable cln = ((product_logDataTable)(base.Clone()));
+                product_owningDataTable cln = ((product_owningDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -441,71 +430,68 @@ namespace Treasurer2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new product_logDataTable();
+                return new product_owningDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnproduct_log_id = base.Columns["product_log_id"];
+                this.columnowning_id = base.Columns["owning_id"];
                 this.columnproduct_id = base.Columns["product_id"];
-                this.columnlog_date = base.Columns["log_date"];
-                this.columnin_or_out = base.Columns["in_or_out"];
+                this.columnproduct_name = base.Columns["product_name"];
                 this.columnquantity = base.Columns["quantity"];
-                this.columnborrowers_username = base.Columns["borrowers_username"];
+                this.columnowner_username = base.Columns["owner_username"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnproduct_log_id = new global::System.Data.DataColumn("product_log_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnproduct_log_id);
-                this.columnproduct_id = new global::System.Data.DataColumn("product_id", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnowning_id = new global::System.Data.DataColumn("owning_id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnowning_id);
+                this.columnproduct_id = new global::System.Data.DataColumn("product_id", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnproduct_id);
-                this.columnlog_date = new global::System.Data.DataColumn("log_date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlog_date);
-                this.columnin_or_out = new global::System.Data.DataColumn("in_or_out", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnin_or_out);
+                this.columnproduct_name = new global::System.Data.DataColumn("product_name", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnproduct_name);
                 this.columnquantity = new global::System.Data.DataColumn("quantity", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnquantity);
-                this.columnborrowers_username = new global::System.Data.DataColumn("borrowers_username", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnborrowers_username);
+                this.columnowner_username = new global::System.Data.DataColumn("owner_username", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnowner_username);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnproduct_log_id}, true));
-                this.columnproduct_log_id.AutoIncrement = true;
-                this.columnproduct_log_id.AutoIncrementSeed = -1;
-                this.columnproduct_log_id.AutoIncrementStep = -1;
-                this.columnproduct_log_id.AllowDBNull = false;
-                this.columnproduct_log_id.Unique = true;
-                this.columnin_or_out.AllowDBNull = false;
-                this.columnin_or_out.MaxLength = 3;
-                this.columnborrowers_username.MaxLength = 45;
+                                this.columnowning_id}, true));
+                this.columnowning_id.AutoIncrement = true;
+                this.columnowning_id.AutoIncrementSeed = -1;
+                this.columnowning_id.AutoIncrementStep = -1;
+                this.columnowning_id.AllowDBNull = false;
+                this.columnowning_id.Unique = true;
+                this.columnproduct_id.MaxLength = 45;
+                this.columnproduct_name.MaxLength = 45;
+                this.columnowner_username.MaxLength = 45;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public product_logRow Newproduct_logRow() {
-                return ((product_logRow)(this.NewRow()));
+            public product_owningRow Newproduct_owningRow() {
+                return ((product_owningRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new product_logRow(builder);
+                return new product_owningRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(product_logRow);
+                return typeof(product_owningRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.product_logRowChanged != null)) {
-                    this.product_logRowChanged(this, new product_logRowChangeEvent(((product_logRow)(e.Row)), e.Action));
+                if ((this.product_owningRowChanged != null)) {
+                    this.product_owningRowChanged(this, new product_owningRowChangeEvent(((product_owningRow)(e.Row)), e.Action));
                 }
             }
             
@@ -513,8 +499,8 @@ namespace Treasurer2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.product_logRowChanging != null)) {
-                    this.product_logRowChanging(this, new product_logRowChangeEvent(((product_logRow)(e.Row)), e.Action));
+                if ((this.product_owningRowChanging != null)) {
+                    this.product_owningRowChanging(this, new product_owningRowChangeEvent(((product_owningRow)(e.Row)), e.Action));
                 }
             }
             
@@ -522,8 +508,8 @@ namespace Treasurer2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.product_logRowDeleted != null)) {
-                    this.product_logRowDeleted(this, new product_logRowChangeEvent(((product_logRow)(e.Row)), e.Action));
+                if ((this.product_owningRowDeleted != null)) {
+                    this.product_owningRowDeleted(this, new product_owningRowChangeEvent(((product_owningRow)(e.Row)), e.Action));
                 }
             }
             
@@ -531,14 +517,14 @@ namespace Treasurer2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.product_logRowDeleting != null)) {
-                    this.product_logRowDeleting(this, new product_logRowChangeEvent(((product_logRow)(e.Row)), e.Action));
+                if ((this.product_owningRowDeleting != null)) {
+                    this.product_owningRowDeleting(this, new product_owningRowChangeEvent(((product_owningRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Removeproduct_logRow(product_logRow row) {
+            public void Removeproduct_owningRow(product_owningRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -547,7 +533,7 @@ namespace Treasurer2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                usersdbDataSet2 ds = new usersdbDataSet2();
+                usersdbDataSet5 ds = new usersdbDataSet5();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -565,7 +551,7 @@ namespace Treasurer2 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "product_logDataTable";
+                attribute2.FixedValue = "product_owningDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -609,68 +595,57 @@ namespace Treasurer2 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class product_logRow : global::System.Data.DataRow {
+        public partial class product_owningRow : global::System.Data.DataRow {
             
-            private product_logDataTable tableproduct_log;
+            private product_owningDataTable tableproduct_owning;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal product_logRow(global::System.Data.DataRowBuilder rb) : 
+            internal product_owningRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableproduct_log = ((product_logDataTable)(this.Table));
+                this.tableproduct_owning = ((product_owningDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int product_log_id {
+            public int owning_id {
                 get {
-                    return ((int)(this[this.tableproduct_log.product_log_idColumn]));
+                    return ((int)(this[this.tableproduct_owning.owning_idColumn]));
                 }
                 set {
-                    this[this.tableproduct_log.product_log_idColumn] = value;
+                    this[this.tableproduct_owning.owning_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int product_id {
-                get {
-                    try {
-                        return ((int)(this[this.tableproduct_log.product_idColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'product_id\' in table \'product_log\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableproduct_log.product_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime log_date {
+            public string product_id {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableproduct_log.log_dateColumn]));
+                        return ((string)(this[this.tableproduct_owning.product_idColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'log_date\' in table \'product_log\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'product_id\' in table \'product_owning\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableproduct_log.log_dateColumn] = value;
+                    this[this.tableproduct_owning.product_idColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string in_or_out {
+            public string product_name {
                 get {
-                    return ((string)(this[this.tableproduct_log.in_or_outColumn]));
+                    try {
+                        return ((string)(this[this.tableproduct_owning.product_nameColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'product_name\' in table \'product_owning\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableproduct_log.in_or_outColumn] = value;
+                    this[this.tableproduct_owning.product_nameColumn] = value;
                 }
             }
             
@@ -679,79 +654,79 @@ namespace Treasurer2 {
             public int quantity {
                 get {
                     try {
-                        return ((int)(this[this.tableproduct_log.quantityColumn]));
+                        return ((int)(this[this.tableproduct_owning.quantityColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'quantity\' in table \'product_log\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'quantity\' in table \'product_owning\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableproduct_log.quantityColumn] = value;
+                    this[this.tableproduct_owning.quantityColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string borrowers_username {
+            public string owner_username {
                 get {
                     try {
-                        return ((string)(this[this.tableproduct_log.borrowers_usernameColumn]));
+                        return ((string)(this[this.tableproduct_owning.owner_usernameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'borrowers_username\' in table \'product_log\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'owner_username\' in table \'product_owning\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableproduct_log.borrowers_usernameColumn] = value;
+                    this[this.tableproduct_owning.owner_usernameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isproduct_idNull() {
-                return this.IsNull(this.tableproduct_log.product_idColumn);
+                return this.IsNull(this.tableproduct_owning.product_idColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void Setproduct_idNull() {
-                this[this.tableproduct_log.product_idColumn] = global::System.Convert.DBNull;
+                this[this.tableproduct_owning.product_idColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Islog_dateNull() {
-                return this.IsNull(this.tableproduct_log.log_dateColumn);
+            public bool Isproduct_nameNull() {
+                return this.IsNull(this.tableproduct_owning.product_nameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setlog_dateNull() {
-                this[this.tableproduct_log.log_dateColumn] = global::System.Convert.DBNull;
+            public void Setproduct_nameNull() {
+                this[this.tableproduct_owning.product_nameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsquantityNull() {
-                return this.IsNull(this.tableproduct_log.quantityColumn);
+                return this.IsNull(this.tableproduct_owning.quantityColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetquantityNull() {
-                this[this.tableproduct_log.quantityColumn] = global::System.Convert.DBNull;
+                this[this.tableproduct_owning.quantityColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isborrowers_usernameNull() {
-                return this.IsNull(this.tableproduct_log.borrowers_usernameColumn);
+            public bool Isowner_usernameNull() {
+                return this.IsNull(this.tableproduct_owning.owner_usernameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setborrowers_usernameNull() {
-                this[this.tableproduct_log.borrowers_usernameColumn] = global::System.Convert.DBNull;
+            public void Setowner_usernameNull() {
+                this[this.tableproduct_owning.owner_usernameColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -759,22 +734,22 @@ namespace Treasurer2 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class product_logRowChangeEvent : global::System.EventArgs {
+        public class product_owningRowChangeEvent : global::System.EventArgs {
             
-            private product_logRow eventRow;
+            private product_owningRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public product_logRowChangeEvent(product_logRow row, global::System.Data.DataRowAction action) {
+            public product_owningRowChangeEvent(product_owningRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public product_logRow Row {
+            public product_owningRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -790,7 +765,7 @@ namespace Treasurer2 {
         }
     }
 }
-namespace Treasurer2.usersdbDataSet2TableAdapters {
+namespace Treasurer2.usersdbDataSet5TableAdapters {
     
     
     /// <summary>
@@ -802,7 +777,7 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class product_logTableAdapter : global::System.ComponentModel.Component {
+    public partial class product_owningTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -816,7 +791,7 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public product_logTableAdapter() {
+        public product_owningTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -913,24 +888,23 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "product_log";
-            tableMapping.ColumnMappings.Add("product_log_id", "product_log_id");
+            tableMapping.DataSetTable = "product_owning";
+            tableMapping.ColumnMappings.Add("owning_id", "owning_id");
             tableMapping.ColumnMappings.Add("product_id", "product_id");
-            tableMapping.ColumnMappings.Add("log_date", "log_date");
-            tableMapping.ColumnMappings.Add("in_or_out", "in_or_out");
+            tableMapping.ColumnMappings.Add("product_name", "product_name");
             tableMapping.ColumnMappings.Add("quantity", "quantity");
-            tableMapping.ColumnMappings.Add("borrowers_username", "borrowers_username");
+            tableMapping.ColumnMappings.Add("owner_username", "owner_username");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `product_log` WHERE ((`product_log_id` = @p1) AND ((@p2 = 1 AND `product_id` IS NULL) OR (`product_id` = @p3)) AND ((@p4 = 1 AND `log_date` IS NULL) OR (`log_date` = @p5)) AND (`in_or_out` = @p6) AND ((@p7 = 1 AND `quantity` IS NULL) OR (`quantity` = @p8)) AND ((@p9 = 1 AND `borrowers_username` IS NULL) OR (`borrowers_username` = @p10)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `product_owning` WHERE ((`owning_id` = @p1) AND ((@p2 = 1 AND `product_id` IS NULL) OR (`product_id` = @p3)) AND ((@p4 = 1 AND `product_name` IS NULL) OR (`product_name` = @p5)) AND ((@p6 = 1 AND `quantity` IS NULL) OR (`quantity` = @p7)) AND ((@p8 = 1 AND `owner_username` IS NULL) OR (`owner_username` = @p9)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "product_log_id";
+            param.SourceColumn = "owning_id";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -944,8 +918,8 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "product_id";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -955,25 +929,26 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "log_date";
+            param.SourceColumn = "product_name";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p5";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "log_date";
+            param.SourceColumn = "product_name";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p6";
-            param.DbType = global::System.Data.DbType.StringFixedLength;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.String;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "in_or_out";
+            param.SourceColumn = "quantity";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p7";
@@ -982,64 +957,47 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "quantity";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p8";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "quantity";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p9";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "borrowers_username";
+            param.SourceColumn = "owner_username";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p10";
+            param.ParameterName = "@p9";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "borrowers_username";
+            param.SourceColumn = "owner_username";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `product_log` (`product_id`, `log_date`, `in_or_out`, `quantity`, `bo" +
-                "rrowers_username`) VALUES (@p1, @p2, @p3, @p4, @p5)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `product_owning` (`product_id`, `product_name`, `quantity`, `owner_us" +
+                "ername`) VALUES (@p1, @p2, @p3, @p4)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "product_id";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p2";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "log_date";
+            param.SourceColumn = "product_name";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
-            param.DbType = global::System.Data.DbType.StringFixedLength;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.String;
-            param.IsNullable = true;
-            param.SourceColumn = "in_or_out";
-            param.SourceVersion = global::System.Data.DataRowVersion.Current;
-            this._adapter.InsertCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -1047,43 +1005,35 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p5";
+            param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "borrowers_username";
+            param.SourceColumn = "owner_username";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `product_log` SET `product_id` = @p1, `log_date` = @p2, `in_or_out` = @p3, `quantity` = @p4, `borrowers_username` = @p5 WHERE ((`product_log_id` = @p6) AND ((@p7 = 1 AND `product_id` IS NULL) OR (`product_id` = @p8)) AND ((@p9 = 1 AND `log_date` IS NULL) OR (`log_date` = @p10)) AND (`in_or_out` = @p11) AND ((@p12 = 1 AND `quantity` IS NULL) OR (`quantity` = @p13)) AND ((@p14 = 1 AND `borrowers_username` IS NULL) OR (`borrowers_username` = @p15)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `product_owning` SET `product_id` = @p1, `product_name` = @p2, `quantity` = @p3, `owner_username` = @p4 WHERE ((`owning_id` = @p5) AND ((@p6 = 1 AND `product_id` IS NULL) OR (`product_id` = @p7)) AND ((@p8 = 1 AND `product_name` IS NULL) OR (`product_name` = @p9)) AND ((@p10 = 1 AND `quantity` IS NULL) OR (`quantity` = @p11)) AND ((@p12 = 1 AND `owner_username` IS NULL) OR (`owner_username` = @p13)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
             param.SourceColumn = "product_id";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p2";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "log_date";
+            param.SourceColumn = "product_name";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
-            param.DbType = global::System.Data.DbType.StringFixedLength;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.String;
-            param.IsNullable = true;
-            param.SourceColumn = "in_or_out";
-            param.SourceVersion = global::System.Data.DataRowVersion.Current;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -1091,61 +1041,70 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p5";
+            param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "borrowers_username";
+            param.SourceColumn = "owner_username";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p5";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "owning_id";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p6";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "product_log_id";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p7";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
             param.SourceColumn = "product_id";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p7";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.IsNullable = true;
+            param.SourceColumn = "product_id";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p8";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "product_id";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p9";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "log_date";
+            param.SourceColumn = "product_name";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p10";
-            param.DbType = global::System.Data.DbType.Date;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Date;
+            param.ParameterName = "@p9";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "log_date";
+            param.SourceColumn = "product_name";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p11";
-            param.DbType = global::System.Data.DbType.StringFixedLength;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.String;
+            param.ParameterName = "@p10";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "in_or_out";
+            param.SourceColumn = "quantity";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p11";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "quantity";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -1153,33 +1112,16 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "quantity";
+            param.SourceColumn = "owner_username";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p13";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "quantity";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p14";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "borrowers_username";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p15";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
-            param.SourceColumn = "borrowers_username";
+            param.SourceColumn = "owner_username";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
         }
@@ -1194,24 +1136,19 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `product_log_id`, `product_id`, `log_date`, `in_or_out`, `quantity`, `borr" +
-                "owers_username` FROM `product_log`";
+            this._commandCollection[0].CommandText = "SELECT `owning_id`, `product_id`, `product_name`, `quantity`, `owner_username` FR" +
+                "OM `product_owning`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT `product_log_id`, `product_id`, `log_date`, `in_or_out`, `quantity`, `borr" +
-                "owers_username` FROM `product_log`";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(usersdbDataSet2.product_logDataTable dataTable) {
+        public virtual int Fill(usersdbDataSet5.product_owningDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1224,9 +1161,9 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual usersdbDataSet2.product_logDataTable GetData() {
+        public virtual usersdbDataSet5.product_owningDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            usersdbDataSet2.product_logDataTable dataTable = new usersdbDataSet2.product_logDataTable();
+            usersdbDataSet5.product_owningDataTable dataTable = new usersdbDataSet5.product_owningDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1234,28 +1171,15 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(usersdbDataSet2.product_logDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(usersdbDataSet2.product_logDataTable dataTable) {
+        public virtual int Update(usersdbDataSet5.product_owningDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(usersdbDataSet2 dataSet) {
-            return this.Adapter.Update(dataSet, "product_log");
+        public virtual int Update(usersdbDataSet5 dataSet) {
+            return this.Adapter.Update(dataSet, "product_owning");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1277,45 +1201,39 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int p1, global::System.Nullable<int> p3, global::System.Nullable<global::System.DateTime> p5, string p6, global::System.Nullable<int> p8, string p10) {
+        public virtual int Delete(int p1, string p3, string p5, global::System.Nullable<int> p7, string p9) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(p1));
-            if ((p3.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(p3.Value));
-            }
-            else {
+            if ((p3 == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((p5.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(p5.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(p3));
+            }
+            if ((p5 == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((p6 == null)) {
-                throw new global::System.ArgumentNullException("p6");
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(p5));
+            }
+            if ((p7.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(p7.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(p6));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((p8.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(p8.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((p10 == null)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            if ((p9 == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(p10));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(p9));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1337,36 +1255,30 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> p1, global::System.Nullable<global::System.DateTime> p2, string p3, global::System.Nullable<int> p4, string p5) {
-            if ((p1.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(p1.Value));
-            }
-            else {
+        public virtual int Insert(string p1, string p2, global::System.Nullable<int> p3, string p4) {
+            if ((p1 == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((p2.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(p2.Value));
-            }
             else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(p1));
+            }
+            if ((p2 == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((p3 == null)) {
-                throw new global::System.ArgumentNullException("p3");
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(p2));
+            }
+            if ((p3.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(p3.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(p3));
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((p4.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(p4.Value));
-            }
-            else {
+            if ((p4 == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((p5 == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(p5));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(p4));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1388,75 +1300,63 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> p1, global::System.Nullable<global::System.DateTime> p2, string p3, global::System.Nullable<int> p4, string p5, int p6, global::System.Nullable<int> p8, global::System.Nullable<global::System.DateTime> p10, string p11, global::System.Nullable<int> p13, string p15) {
-            if ((p1.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(p1.Value));
-            }
-            else {
+        public virtual int Update(string p1, string p2, global::System.Nullable<int> p3, string p4, int p5, string p7, string p9, global::System.Nullable<int> p11, string p13) {
+            if ((p1 == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((p2.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(p2.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(p1));
+            }
+            if ((p2 == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((p3 == null)) {
-                throw new global::System.ArgumentNullException("p3");
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(p2));
+            }
+            if ((p3.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(p3.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(p3));
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((p4.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(p4.Value));
-            }
-            else {
+            if ((p4 == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((p5 == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p4));
+            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(p5));
+            if ((p7 == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(p5));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(p7));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(p6));
-            if ((p8.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(p8.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            if ((p10.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(p10.Value));
+            if ((p9 == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(p9));
             }
-            if ((p11 == null)) {
-                throw new global::System.ArgumentNullException("p11");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(p11));
-            }
-            if ((p13.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(p13.Value));
+            if ((p11.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(p11.Value));
             }
             else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((p13 == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
-            if ((p15 == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(p15));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(p13));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1487,7 +1387,7 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private product_logTableAdapter _product_logTableAdapter;
+        private product_owningTableAdapter _product_owningTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1509,12 +1409,12 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public product_logTableAdapter product_logTableAdapter {
+        public product_owningTableAdapter product_owningTableAdapter {
             get {
-                return this._product_logTableAdapter;
+                return this._product_owningTableAdapter;
             }
             set {
-                this._product_logTableAdapter = value;
+                this._product_owningTableAdapter = value;
             }
         }
         
@@ -1537,9 +1437,9 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._product_logTableAdapter != null) 
-                            && (this._product_logTableAdapter.Connection != null))) {
-                    return this._product_logTableAdapter.Connection;
+                if (((this._product_owningTableAdapter != null) 
+                            && (this._product_owningTableAdapter.Connection != null))) {
+                    return this._product_owningTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1554,7 +1454,7 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._product_logTableAdapter != null)) {
+                if ((this._product_owningTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1566,14 +1466,14 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(usersdbDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(usersdbDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._product_logTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.product_log.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._product_owningTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.product_owning.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._product_logTableAdapter.Update(updatedRows));
+                    result = (result + this._product_owningTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1585,13 +1485,13 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(usersdbDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(usersdbDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._product_logTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.product_log.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._product_owningTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.product_owning.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._product_logTableAdapter.Update(addedRows));
+                    result = (result + this._product_owningTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1603,13 +1503,13 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(usersdbDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(usersdbDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._product_logTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.product_log.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._product_owningTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.product_owning.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._product_logTableAdapter.Update(deletedRows));
+                    result = (result + this._product_owningTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1645,15 +1545,15 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(usersdbDataSet2 dataSet) {
+        public virtual int UpdateAll(usersdbDataSet5 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._product_logTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._product_logTableAdapter.Connection) == false))) {
+            if (((this._product_owningTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._product_owningTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1689,13 +1589,13 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._product_logTableAdapter != null)) {
-                    revertConnections.Add(this._product_logTableAdapter, this._product_logTableAdapter.Connection);
-                    this._product_logTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
-                    this._product_logTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
-                    if (this._product_logTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._product_logTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._product_logTableAdapter.Adapter);
+                if ((this._product_owningTableAdapter != null)) {
+                    revertConnections.Add(this._product_owningTableAdapter, this._product_owningTableAdapter.Connection);
+                    this._product_owningTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
+                    this._product_owningTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
+                    if (this._product_owningTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._product_owningTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._product_owningTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1756,9 +1656,9 @@ namespace Treasurer2.usersdbDataSet2TableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._product_logTableAdapter != null)) {
-                    this._product_logTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._product_logTableAdapter]));
-                    this._product_logTableAdapter.Transaction = null;
+                if ((this._product_owningTableAdapter != null)) {
+                    this._product_owningTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._product_owningTableAdapter]));
+                    this._product_owningTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

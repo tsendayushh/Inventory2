@@ -15,8 +15,10 @@ namespace Treasurer2
 {
     public partial class AddProductForm : DevExpress.XtraEditors.XtraForm
     {
+
         MyDatabase db = new MyDatabase();
         PRODUCTS product = new PRODUCTS();
+
 
         #region AddProductForm
         public AddProductForm()
@@ -55,7 +57,9 @@ namespace Treasurer2
                 (string.IsNullOrEmpty(dateEditManufactured.SelectedText)) ||
                 (string.IsNullOrEmpty(dateEditExpire.SelectedText)) ||
                 (glueOwner.Text == "") ||
-                (pictureEdit.Image == null))
+                (pictureEdit.Image == null) ||
+                (textEditQuantity.Text == "") ||
+                (textEditPrice.Text == ""))
             {
                 return false;
             }
@@ -79,9 +83,12 @@ namespace Treasurer2
                 string owner = glueOwner.Text;
                 MemoryStream image = new MemoryStream();
 
+                int quantity = Convert.ToInt32(textEditQuantity.Text);
+                int price = Convert.ToInt32(textEditPrice.Text);
+
                 pictureEdit.Image.Save(image, pictureEdit.Image.RawFormat);
 
-                if (product.addProduct(pName, pType, mDate, eDate, owner, image))
+                if (product.addProduct(pName, pType, mDate, eDate, owner, image, quantity, price))
                 {
                     MessageBox.Show("Эд хөрөнгийн бүртгэл амжилттай боллоо.", "Амжилттай", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

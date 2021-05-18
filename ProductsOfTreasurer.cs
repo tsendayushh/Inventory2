@@ -57,7 +57,14 @@ namespace Treasurer2
                (gridView1.FocusedColumn.FieldName == "ptype"))
             {
                 string pid = Convert.ToString(gridView1.GetFocusedRowCellValue(colproduct_id));
-                UpdatePFormDataSet(pid);
+
+                MySqlCommand command = new MySqlCommand("CALL `usersdb`.`search_product_log_by_pid`(@PID);", db.getConnection());
+                command.Parameters.Add("@PID", MySqlDbType.Int32).Value = Convert.ToInt32(pid);
+                ProductLogForm productLForm = new ProductLogForm();
+                productLForm.Show(this);
+                productLForm.gridControlLog.DataSource = db.getDataTable(command);
+                
+                //UpdatePFormDataSet(pid);
             }
             if(gridView1.FocusedColumn.FieldName == "person_responsible_for")
             {
@@ -90,6 +97,9 @@ namespace Treasurer2
                 updatePForm.dateEditManufactured.DateTime = (DateTime)table.Rows[0]["date_manufactured"];
                 updatePForm.dateEditExpire.DateTime = (DateTime)table.Rows[0]["date_expire"];
                 updatePForm.glueOwner.Text = table.Rows[0]["person_responsible_for"].ToString();
+
+                updatePForm.textEditQuantity.Text = table.Rows[0]["stock_quantity"].ToString();
+                updatePForm.textEditPrice.Text = table.Rows[0]["price"].ToString();
 
                 byte[] img = (byte[])table.Rows[0]["image"];
                 MemoryStream image = new MemoryStream(img);
@@ -244,5 +254,6 @@ namespace Treasurer2
             ProductLogForm productLForm = new ProductLogForm();
             productLForm.Show(this);
         }
+
     }
 }

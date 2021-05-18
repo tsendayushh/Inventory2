@@ -37,21 +37,23 @@ namespace Treasurer2
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.glueBorrowerUsername = new DevExpress.XtraEditors.GridLookUpEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar1 = new DevExpress.XtraBars.Bar();
+            this.bar5 = new DevExpress.XtraBars.Bar();
             this.barButtonAddLog = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barEditSearchText = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
-            this.barButtonItemSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.barButtonItemSearch = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
+            this.barEditSearchText = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemTextEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.textBoxQuantity = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -62,9 +64,23 @@ namespace Treasurer2
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.glueProduct = new DevExpress.XtraEditors.GridLookUpEdit();
             this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.gridControlOwning = new DevExpress.XtraGrid.GridControl();
+            this.productowningBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersdbDataSet5 = new Treasurer2.usersdbDataSet5();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colowning_id = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colproduct_id1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colproduct_name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colquantity1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colowner_username = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
+            this.gridControlLog = new DevExpress.XtraGrid.GridControl();
             this.productlogBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersdbDataSet2 = new Treasurer2.usersdbDataSet2();
+            this.usersdbDataSet6 = new Treasurer2.usersdbDataSet6();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colproduct_log_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colproduct_id = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -72,11 +88,22 @@ namespace Treasurer2
             this.colin_or_out = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colquantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colborrowers_username = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar3 = new DevExpress.XtraBars.Bar();
-            this.product_logTableAdapter = new Treasurer2.usersdbDataSet2TableAdapters.product_logTableAdapter();
+            this.bar4 = new DevExpress.XtraBars.Bar();
+            this.bar1 = new DevExpress.XtraBars.Bar();
+            this.product_owningTableAdapter = new Treasurer2.usersdbDataSet5TableAdapters.product_owningTableAdapter();
+            this.product_logTableAdapter = new Treasurer2.usersdbDataSet6TableAdapters.product_logTableAdapter();
+            this.simpleButtonSearchOwning = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.simpleButtonClearOwning = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.textEditSearch = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
@@ -87,8 +114,8 @@ namespace Treasurer2
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.glueBorrowerUsername.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxQuantity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboboxInOrOut.Properties)).BeginInit();
@@ -96,12 +123,34 @@ namespace Treasurer2
             ((System.ComponentModel.ISupportInitialize)(this.dateEditLog.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.glueProduct.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).BeginInit();
+            this.splitContainerControl2.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel2)).BeginInit();
+            this.splitContainerControl2.Panel2.SuspendLayout();
+            this.splitContainerControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
+            this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlOwning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productowningBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
+            this.layoutControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productlogBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditSearch.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -111,7 +160,7 @@ namespace Treasurer2
             this.layoutControl1.Location = new System.Drawing.Point(0, 32);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(631, 418);
+            this.layoutControl1.Size = new System.Drawing.Size(830, 452);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -137,10 +186,10 @@ namespace Treasurer2
             // 
             // splitContainerControl1.Panel2
             // 
-            this.splitContainerControl1.Panel2.Controls.Add(this.gridControl1);
+            this.splitContainerControl1.Panel2.Controls.Add(this.splitContainerControl2);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(607, 394);
-            this.splitContainerControl1.SplitterPosition = 180;
+            this.splitContainerControl1.Size = new System.Drawing.Size(806, 428);
+            this.splitContainerControl1.SplitterPosition = 194;
             this.splitContainerControl1.TabIndex = 5;
             // 
             // buttonAddLog
@@ -149,7 +198,7 @@ namespace Treasurer2
             this.buttonAddLog.Name = "buttonAddLog";
             this.buttonAddLog.Size = new System.Drawing.Size(158, 29);
             this.buttonAddLog.TabIndex = 24;
-            this.buttonAddLog.Text = "simpleButton1";
+            this.buttonAddLog.Text = "Авах/Буцаах";
             this.buttonAddLog.Click += new System.EventHandler(this.buttonAddLog_Click);
             // 
             // labelControl5
@@ -179,7 +228,7 @@ namespace Treasurer2
             // barManager1
             // 
             this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.bar1});
+            this.bar5});
             this.barManager1.DockControls.Add(this.barDockControlTop);
             this.barManager1.DockControls.Add(this.barDockControlBottom);
             this.barManager1.DockControls.Add(this.barDockControlLeft);
@@ -193,25 +242,28 @@ namespace Treasurer2
             this.barStaticItem1,
             this.barEditSearchText,
             this.barButtonItemSearch,
-            this.barButtonItem1});
-            this.barManager1.MaxItemId = 8;
+            this.barButtonItem1,
+            this.barButtonItem4,
+            this.barButtonItem5});
+            this.barManager1.MaxItemId = 10;
             this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1,
             this.repositoryItemTextEdit2});
             // 
-            // bar1
+            // bar5
             // 
-            this.bar1.BarName = "Tools";
-            this.bar1.DockCol = 0;
-            this.bar1.DockRow = 0;
-            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            this.bar5.BarName = "Custom 2";
+            this.bar5.DockCol = 0;
+            this.bar5.DockRow = 0;
+            this.bar5.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar5.FloatLocation = new System.Drawing.Point(162, 129);
+            this.bar5.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonAddLog),
             new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.Width, this.barEditSearchText, "", false, true, true, 103),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemSearch),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1)});
-            this.bar1.Text = "Tools";
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1, true),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barEditItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemSearch)});
+            this.bar5.Text = "Custom 2";
             // 
             // barButtonAddLog
             // 
@@ -231,6 +283,80 @@ namespace Treasurer2
             this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonItem3.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem3_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Border = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.barButtonItem1.Caption = "Refresh";
+            this.barButtonItem1.Id = 7;
+            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_1);
+            // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Caption = "barEditItem1";
+            this.barEditItem1.Edit = this.repositoryItemTextEdit1;
+            this.barEditItem1.Id = 3;
+            this.barEditItem1.Name = "barEditItem1";
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
+            // 
+            // barButtonItemSearch
+            // 
+            this.barButtonItemSearch.Border = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.barButtonItemSearch.Caption = "Хайх";
+            this.barButtonItemSearch.Id = 6;
+            this.barButtonItemSearch.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemSearch.ImageOptions.SvgImage")));
+            this.barButtonItemSearch.Name = "barButtonItemSearch";
+            this.barButtonItemSearch.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItemSearch_ItemClick);
+            // 
+            // barDockControlTop
+            // 
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(830, 32);
+            // 
+            // barDockControlBottom
+            // 
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 484);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(830, 0);
+            // 
+            // barDockControlLeft
+            // 
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 32);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 452);
+            // 
+            // barDockControlRight
+            // 
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(830, 32);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 452);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Id = 1;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
+            // barStaticItem1
+            // 
+            this.barStaticItem1.Id = 4;
+            this.barStaticItem1.Name = "barStaticItem1";
             // 
             // barEditSearchText
             // 
@@ -245,77 +371,17 @@ namespace Treasurer2
             this.repositoryItemTextEdit2.AutoHeight = false;
             this.repositoryItemTextEdit2.Name = "repositoryItemTextEdit2";
             // 
-            // barButtonItemSearch
+            // barButtonItem4
             // 
-            this.barButtonItemSearch.Border = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.barButtonItemSearch.Caption = "Хайх";
-            this.barButtonItemSearch.Id = 6;
-            this.barButtonItemSearch.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItemSearch.ImageOptions.SvgImage")));
-            this.barButtonItemSearch.Name = "barButtonItemSearch";
+            this.barButtonItem4.Caption = "barButtonItem4";
+            this.barButtonItem4.Id = 8;
+            this.barButtonItem4.Name = "barButtonItem4";
             // 
-            // barButtonItem1
+            // barButtonItem5
             // 
-            this.barButtonItem1.Border = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.barButtonItem1.Caption = "Refresh";
-            this.barButtonItem1.Id = 7;
-            this.barButtonItem1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem1.ImageOptions.SvgImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_1);
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(631, 32);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 450);
-            this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(631, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 32);
-            this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 418);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(631, 32);
-            this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 418);
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Id = 1;
-            this.barButtonItem2.Name = "barButtonItem2";
-            // 
-            // barEditItem1
-            // 
-            this.barEditItem1.Caption = "barEditItem1";
-            this.barEditItem1.Edit = this.repositoryItemTextEdit1;
-            this.barEditItem1.Id = 3;
-            this.barEditItem1.Name = "barEditItem1";
-            // 
-            // repositoryItemTextEdit1
-            // 
-            this.repositoryItemTextEdit1.AutoHeight = false;
-            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
-            // 
-            // barStaticItem1
-            // 
-            this.barStaticItem1.Id = 4;
-            this.barStaticItem1.Name = "barStaticItem1";
+            this.barButtonItem5.Caption = "barButtonItem5";
+            this.barButtonItem5.Id = 9;
+            this.barButtonItem5.Name = "barButtonItem5";
             // 
             // gridView2
             // 
@@ -352,7 +418,7 @@ namespace Treasurer2
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboboxInOrOut.Properties.DropDownRows = 2;
             this.comboboxInOrOut.Properties.Items.AddRange(new object[] {
-            "Зээлэх",
+            "Авах",
             "Буцаах"});
             this.comboboxInOrOut.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.comboboxInOrOut.Size = new System.Drawing.Size(156, 20);
@@ -428,28 +494,173 @@ namespace Treasurer2
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // gridControl1
+            // splitContainerControl2
             // 
-            this.gridControl1.DataSource = this.productlogBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.MenuManager = this.barManager1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(417, 394);
-            this.gridControl1.TabIndex = 5;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainerControl2.Horizontal = false;
+            this.splitContainerControl2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainerControl2.Name = "splitContainerControl2";
+            // 
+            // splitContainerControl2.Panel1
+            // 
+            this.splitContainerControl2.Panel1.Controls.Add(this.layoutControl2);
+            this.splitContainerControl2.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl2.Panel2
+            // 
+            this.splitContainerControl2.Panel2.Controls.Add(this.layoutControl3);
+            this.splitContainerControl2.Panel2.Text = "Panel2";
+            this.splitContainerControl2.Size = new System.Drawing.Size(602, 428);
+            this.splitContainerControl2.SplitterPosition = 195;
+            this.splitContainerControl2.TabIndex = 0;
+            // 
+            // layoutControl2
+            // 
+            this.layoutControl2.Controls.Add(this.textEditSearch);
+            this.layoutControl2.Controls.Add(this.simpleButtonClearOwning);
+            this.layoutControl2.Controls.Add(this.simpleButtonSearchOwning);
+            this.layoutControl2.Controls.Add(this.gridControlOwning);
+            this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl2.Name = "layoutControl2";
+            this.layoutControl2.Root = this.layoutControlGroup1;
+            this.layoutControl2.Size = new System.Drawing.Size(602, 195);
+            this.layoutControl2.TabIndex = 0;
+            this.layoutControl2.Text = "layoutControl2";
+            // 
+            // gridControlOwning
+            // 
+            this.gridControlOwning.DataSource = this.productowningBindingSource;
+            this.gridControlOwning.Location = new System.Drawing.Point(12, 38);
+            this.gridControlOwning.MainView = this.gridView3;
+            this.gridControlOwning.MenuManager = this.barManager1;
+            this.gridControlOwning.Name = "gridControlOwning";
+            this.gridControlOwning.Size = new System.Drawing.Size(578, 145);
+            this.gridControlOwning.TabIndex = 0;
+            this.gridControlOwning.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // productowningBindingSource
+            // 
+            this.productowningBindingSource.DataMember = "product_owning";
+            this.productowningBindingSource.DataSource = this.usersdbDataSet5;
+            // 
+            // usersdbDataSet5
+            // 
+            this.usersdbDataSet5.DataSetName = "usersdbDataSet5";
+            this.usersdbDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // gridView3
+            // 
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colowning_id,
+            this.colproduct_id1,
+            this.colproduct_name,
+            this.colquantity1,
+            this.colowner_username});
+            this.gridView3.GridControl = this.gridControlOwning;
+            this.gridView3.Name = "gridView3";
+            this.gridView3.OptionsView.ShowGroupPanel = false;
+            // 
+            // colowning_id
+            // 
+            this.colowning_id.Caption = "#";
+            this.colowning_id.FieldName = "owning_id";
+            this.colowning_id.Name = "colowning_id";
+            this.colowning_id.Visible = true;
+            this.colowning_id.VisibleIndex = 0;
+            this.colowning_id.Width = 83;
+            // 
+            // colproduct_id1
+            // 
+            this.colproduct_id1.Caption = "Product ID";
+            this.colproduct_id1.FieldName = "product_id";
+            this.colproduct_id1.Name = "colproduct_id1";
+            this.colproduct_id1.Visible = true;
+            this.colproduct_id1.VisibleIndex = 1;
+            this.colproduct_id1.Width = 140;
+            // 
+            // colproduct_name
+            // 
+            this.colproduct_name.Caption = "Product name";
+            this.colproduct_name.FieldName = "product_name";
+            this.colproduct_name.Name = "colproduct_name";
+            this.colproduct_name.Visible = true;
+            this.colproduct_name.VisibleIndex = 2;
+            this.colproduct_name.Width = 299;
+            // 
+            // colquantity1
+            // 
+            this.colquantity1.Caption = "Quantity";
+            this.colquantity1.FieldName = "quantity";
+            this.colquantity1.Name = "colquantity1";
+            this.colquantity1.Visible = true;
+            this.colquantity1.VisibleIndex = 3;
+            this.colquantity1.Width = 162;
+            // 
+            // colowner_username
+            // 
+            this.colowner_username.Caption = "Owner";
+            this.colowner_username.FieldName = "owner_username";
+            this.colowner_username.Name = "colowner_username";
+            this.colowner_username.Visible = true;
+            this.colowner_username.VisibleIndex = 4;
+            this.colowner_username.Width = 332;
+            // 
+            // layoutControlGroup1
+            // 
+            this.layoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup1.GroupBordersVisible = false;
+            this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem1,
+            this.layoutControlItem7,
+            this.layoutControlItem3,
+            this.layoutControlItem4});
+            this.layoutControlGroup1.Name = "Root";
+            this.layoutControlGroup1.Size = new System.Drawing.Size(602, 195);
+            this.layoutControlGroup1.TextVisible = false;
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.gridControlOwning;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 26);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(582, 149);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // layoutControl3
+            // 
+            this.layoutControl3.Controls.Add(this.gridControlLog);
+            this.layoutControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl3.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl3.Name = "layoutControl3";
+            this.layoutControl3.Root = this.layoutControlGroup2;
+            this.layoutControl3.Size = new System.Drawing.Size(602, 223);
+            this.layoutControl3.TabIndex = 0;
+            this.layoutControl3.Text = "layoutControl3";
+            // 
+            // gridControlLog
+            // 
+            this.gridControlLog.DataSource = this.productlogBindingSource;
+            this.gridControlLog.Location = new System.Drawing.Point(12, 12);
+            this.gridControlLog.MainView = this.gridView1;
+            this.gridControlLog.MenuManager = this.barManager1;
+            this.gridControlLog.Name = "gridControlLog";
+            this.gridControlLog.Size = new System.Drawing.Size(578, 199);
+            this.gridControlLog.TabIndex = 6;
+            this.gridControlLog.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // productlogBindingSource
             // 
             this.productlogBindingSource.DataMember = "product_log";
-            this.productlogBindingSource.DataSource = this.usersdbDataSet2;
+            this.productlogBindingSource.DataSource = this.usersdbDataSet6;
             // 
-            // usersdbDataSet2
+            // usersdbDataSet6
             // 
-            this.usersdbDataSet2.DataSetName = "usersdbDataSet2";
-            this.usersdbDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.usersdbDataSet6.DataSetName = "usersdbDataSet6";
+            this.usersdbDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -460,23 +671,23 @@ namespace Treasurer2
             this.colin_or_out,
             this.colquantity,
             this.colborrowers_username});
-            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GridControl = this.gridControlLog;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.ReadOnly = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colin_or_out, DevExpress.Data.ColumnSortOrder.Ascending)});
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colproduct_log_id, DevExpress.Data.ColumnSortOrder.Ascending)});
             // 
             // colproduct_log_id
             // 
-            this.colproduct_log_id.Caption = "Log #";
+            this.colproduct_log_id.Caption = "#";
             this.colproduct_log_id.FieldName = "product_log_id";
             this.colproduct_log_id.Name = "colproduct_log_id";
             this.colproduct_log_id.OptionsColumn.AllowEdit = false;
             this.colproduct_log_id.OptionsColumn.ReadOnly = true;
             this.colproduct_log_id.Visible = true;
             this.colproduct_log_id.VisibleIndex = 0;
-            this.colproduct_log_id.Width = 96;
+            this.colproduct_log_id.Width = 72;
             // 
             // colproduct_id
             // 
@@ -486,7 +697,7 @@ namespace Treasurer2
             this.colproduct_id.OptionsColumn.AllowEdit = false;
             this.colproduct_id.Visible = true;
             this.colproduct_id.VisibleIndex = 1;
-            this.colproduct_id.Width = 116;
+            this.colproduct_id.Width = 131;
             // 
             // coldate
             // 
@@ -496,8 +707,8 @@ namespace Treasurer2
             this.coldate.OptionsColumn.AllowEdit = false;
             this.coldate.OptionsColumn.ReadOnly = true;
             this.coldate.Visible = true;
-            this.coldate.VisibleIndex = 2;
-            this.coldate.Width = 224;
+            this.coldate.VisibleIndex = 3;
+            this.coldate.Width = 167;
             // 
             // colin_or_out
             // 
@@ -507,8 +718,8 @@ namespace Treasurer2
             this.colin_or_out.OptionsColumn.AllowEdit = false;
             this.colin_or_out.OptionsColumn.ReadOnly = true;
             this.colin_or_out.Visible = true;
-            this.colin_or_out.VisibleIndex = 3;
-            this.colin_or_out.Width = 162;
+            this.colin_or_out.VisibleIndex = 2;
+            this.colin_or_out.Width = 146;
             // 
             // colquantity
             // 
@@ -519,7 +730,7 @@ namespace Treasurer2
             this.colquantity.OptionsColumn.ReadOnly = true;
             this.colquantity.Visible = true;
             this.colquantity.VisibleIndex = 4;
-            this.colquantity.Width = 163;
+            this.colquantity.Width = 186;
             // 
             // colborrowers_username
             // 
@@ -528,7 +739,26 @@ namespace Treasurer2
             this.colborrowers_username.Name = "colborrowers_username";
             this.colborrowers_username.Visible = true;
             this.colborrowers_username.VisibleIndex = 5;
-            this.colborrowers_username.Width = 255;
+            this.colborrowers_username.Width = 314;
+            // 
+            // layoutControlGroup2
+            // 
+            this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup2.GroupBordersVisible = false;
+            this.layoutControlGroup2.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem5});
+            this.layoutControlGroup2.Name = "layoutControlGroup2";
+            this.layoutControlGroup2.Size = new System.Drawing.Size(602, 223);
+            this.layoutControlGroup2.TextVisible = false;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.gridControlLog;
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(582, 203);
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem5.TextVisible = false;
             // 
             // Root
             // 
@@ -537,7 +767,7 @@ namespace Treasurer2
             this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(631, 418);
+            this.Root.Size = new System.Drawing.Size(830, 452);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem2
@@ -545,7 +775,7 @@ namespace Treasurer2
             this.layoutControlItem2.Control = this.splitContainerControl1;
             this.layoutControlItem2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(611, 398);
+            this.layoutControlItem2.Size = new System.Drawing.Size(810, 432);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
@@ -569,20 +799,104 @@ namespace Treasurer2
             this.bar3.OptionsBar.UseWholeRow = true;
             this.bar3.Text = "Status bar";
             // 
+            // bar4
+            // 
+            this.bar4.BarName = "ProductOwningGridControlToolBar";
+            this.bar4.DockCol = 0;
+            this.bar4.DockRow = 0;
+            this.bar4.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar4.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonAddLog),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem3),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barEditItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItemSearch)});
+            this.bar4.Text = "ProductOwningGridControlToolBar";
+            // 
+            // bar1
+            // 
+            this.bar1.BarName = "Tools";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 0;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar1.Text = "Tools";
+            this.bar1.Visible = false;
+            // 
+            // product_owningTableAdapter
+            // 
+            this.product_owningTableAdapter.ClearBeforeFill = true;
+            // 
             // product_logTableAdapter
             // 
             this.product_logTableAdapter.ClearBeforeFill = true;
+            // 
+            // simpleButtonSearchOwning
+            // 
+            this.simpleButtonSearchOwning.Location = new System.Drawing.Point(416, 12);
+            this.simpleButtonSearchOwning.Name = "simpleButtonSearchOwning";
+            this.simpleButtonSearchOwning.Size = new System.Drawing.Size(85, 22);
+            this.simpleButtonSearchOwning.StyleController = this.layoutControl2;
+            this.simpleButtonSearchOwning.TabIndex = 6;
+            this.simpleButtonSearchOwning.Text = "Хайх";
+            this.simpleButtonSearchOwning.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.simpleButtonSearchOwning;
+            this.layoutControlItem7.Location = new System.Drawing.Point(404, 0);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(89, 26);
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem7.TextVisible = false;
+            // 
+            // simpleButtonClearOwning
+            // 
+            this.simpleButtonClearOwning.Location = new System.Drawing.Point(505, 12);
+            this.simpleButtonClearOwning.Name = "simpleButtonClearOwning";
+            this.simpleButtonClearOwning.Size = new System.Drawing.Size(85, 22);
+            this.simpleButtonClearOwning.StyleController = this.layoutControl2;
+            this.simpleButtonClearOwning.TabIndex = 7;
+            this.simpleButtonClearOwning.Text = "Арилгах";
+            this.simpleButtonClearOwning.Click += new System.EventHandler(this.simpleButtonClearOwning_Click);
+            // 
+            // layoutControlItem3
+            // 
+            this.layoutControlItem3.Control = this.simpleButtonClearOwning;
+            this.layoutControlItem3.Location = new System.Drawing.Point(493, 0);
+            this.layoutControlItem3.Name = "layoutControlItem3";
+            this.layoutControlItem3.Size = new System.Drawing.Size(89, 26);
+            this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem3.TextVisible = false;
+            // 
+            // textEditSearch
+            // 
+            this.textEditSearch.Location = new System.Drawing.Point(103, 12);
+            this.textEditSearch.MenuManager = this.barManager1;
+            this.textEditSearch.Name = "textEditSearch";
+            this.textEditSearch.Size = new System.Drawing.Size(309, 20);
+            this.textEditSearch.StyleController = this.layoutControl2;
+            this.textEditSearch.TabIndex = 8;
+            // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.textEditSearch;
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(404, 26);
+            this.layoutControlItem4.Text = "Хайлтын утга:";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(79, 14);
             // 
             // ProductLogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 450);
+            this.ClientSize = new System.Drawing.Size(830, 484);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("ProductLogForm.IconOptions.SvgImage")));
             this.Name = "ProductLogForm";
             this.Text = "ProductLogForm";
             this.Load += new System.EventHandler(this.ProductLogForm_Load);
@@ -597,8 +911,8 @@ namespace Treasurer2
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.glueBorrowerUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxQuantity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboboxInOrOut.Properties)).EndInit();
@@ -606,12 +920,34 @@ namespace Treasurer2
             ((System.ComponentModel.ISupportInitialize)(this.dateEditLog.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.glueProduct.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).EndInit();
+            this.splitContainerControl2.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel2)).EndInit();
+            this.splitContainerControl2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
+            this.splitContainerControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
+            this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlOwning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productowningBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
+            this.layoutControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productlogBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEditSearch.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -622,7 +958,6 @@ namespace Treasurer2
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraBars.Bar bar1;
         private DevExpress.XtraBars.BarDockControl barDockControlTop;
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
@@ -638,20 +973,9 @@ namespace Treasurer2
         private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
         private DevExpress.XtraBars.BarStaticItem barStaticItem1;
-        private usersdbDataSet2 usersdbDataSet2;
-        private System.Windows.Forms.BindingSource productlogBindingSource;
-        private usersdbDataSet2TableAdapters.product_logTableAdapter product_logTableAdapter;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraEditors.GridLookUpEdit glueProduct;
         private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colproduct_log_id;
-        private DevExpress.XtraGrid.Columns.GridColumn colproduct_id;
-        private DevExpress.XtraGrid.Columns.GridColumn coldate;
-        private DevExpress.XtraGrid.Columns.GridColumn colin_or_out;
-        private DevExpress.XtraGrid.Columns.GridColumn colquantity;
-        private DevExpress.XtraGrid.Columns.GridColumn colborrowers_username;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
@@ -665,5 +989,44 @@ namespace Treasurer2
         private DevExpress.XtraEditors.TextEdit textBoxQuantity;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
+        private DevExpress.XtraGrid.GridControl gridControlOwning;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        internal DevExpress.XtraGrid.GridControl gridControlLog;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colproduct_log_id;
+        private DevExpress.XtraGrid.Columns.GridColumn colproduct_id;
+        private DevExpress.XtraGrid.Columns.GridColumn coldate;
+        private DevExpress.XtraGrid.Columns.GridColumn colin_or_out;
+        private DevExpress.XtraGrid.Columns.GridColumn colquantity;
+        private DevExpress.XtraGrid.Columns.GridColumn colborrowers_username;
+        private DevExpress.XtraGrid.Columns.GridColumn colowning_id;
+        private DevExpress.XtraGrid.Columns.GridColumn colproduct_id1;
+        private DevExpress.XtraGrid.Columns.GridColumn colproduct_name;
+        private DevExpress.XtraGrid.Columns.GridColumn colquantity1;
+        private DevExpress.XtraGrid.Columns.GridColumn colowner_username;
+        private DevExpress.XtraBars.Bar bar5;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraLayout.LayoutControl layoutControl2;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraBars.Bar bar4;
+        private DevExpress.XtraBars.Bar bar1;
+        private DevExpress.XtraLayout.LayoutControl layoutControl3;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private usersdbDataSet5 usersdbDataSet5;
+        private System.Windows.Forms.BindingSource productowningBindingSource;
+        private usersdbDataSet5TableAdapters.product_owningTableAdapter product_owningTableAdapter;
+        private usersdbDataSet6 usersdbDataSet6;
+        private System.Windows.Forms.BindingSource productlogBindingSource;
+        private usersdbDataSet6TableAdapters.product_logTableAdapter product_logTableAdapter;
+        private DevExpress.XtraEditors.TextEdit textEditSearch;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonClearOwning;
+        private DevExpress.XtraEditors.SimpleButton simpleButtonSearchOwning;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
     }
 }

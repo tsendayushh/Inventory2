@@ -61,5 +61,11 @@ namespace Treasurer2
 
             return table;
         }
+        public void commandExcecuter(MySqlCommand command)
+        {
+            openConnection();
+            command.ExecuteNonQuery();
+            closeConnection();
+        }
     }
 }
