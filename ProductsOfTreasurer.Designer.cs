@@ -58,29 +58,23 @@ namespace Treasurer2
             this.addLogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.standaloneBarDockControl1 = new DevExpress.XtraBars.StandaloneBarDockControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersdbDataSet1 = new Treasurer2.usersdbDataSet1();
+            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersdbDataSet3 = new Treasurer2.usersdbDataSet3();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colproduct_id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colpname = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colptype = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colquantity = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coltotal_quantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldate_manufactured = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colimage = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colprice = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colperson_responsible_for = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.productTableAdapter = new Treasurer2.usersdbDataSet1TableAdapters.productTableAdapter();
-            this.usersdbDataSet3 = new Treasurer2.usersdbDataSet3();
-            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productTableAdapter1 = new Treasurer2.usersdbDataSet3TableAdapters.productTableAdapter();
-            this.coltotal_quantity = new DevExpress.XtraGrid.Columns.GridColumn();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // coldate_expire
@@ -99,6 +93,8 @@ namespace Treasurer2
             this.colstock_quantity.Caption = "In storage";
             this.colstock_quantity.FieldName = "stock_quantity";
             this.colstock_quantity.Name = "colstock_quantity";
+            this.colstock_quantity.OptionsColumn.AllowEdit = false;
+            this.colstock_quantity.OptionsColumn.ReadOnly = true;
             this.colstock_quantity.Visible = true;
             this.colstock_quantity.VisibleIndex = 3;
             this.colstock_quantity.Width = 91;
@@ -266,15 +262,15 @@ namespace Treasurer2
             this.gridView1});
             this.gridControl1.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
             // 
-            // productBindingSource
+            // productBindingSource1
             // 
-            this.productBindingSource.DataMember = "product";
-            this.productBindingSource.DataSource = this.usersdbDataSet1;
+            this.productBindingSource1.DataMember = "product";
+            this.productBindingSource1.DataSource = this.usersdbDataSet3;
             // 
-            // usersdbDataSet1
+            // usersdbDataSet3
             // 
-            this.usersdbDataSet1.DataSetName = "usersdbDataSet1";
-            this.usersdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.usersdbDataSet3.DataSetName = "usersdbDataSet3";
+            this.usersdbDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // gridView1
             // 
@@ -282,7 +278,6 @@ namespace Treasurer2
             this.colproduct_id,
             this.colpname,
             this.colptype,
-            this.colquantity,
             this.colstock_quantity,
             this.coltotal_quantity,
             this.coldate_manufactured,
@@ -358,12 +353,16 @@ namespace Treasurer2
             this.colptype.VisibleIndex = 2;
             this.colptype.Width = 92;
             // 
-            // colquantity
+            // coltotal_quantity
             // 
-            this.colquantity.Caption = "Quantity";
-            this.colquantity.FieldName = "quantity";
-            this.colquantity.Name = "colquantity";
-            this.colquantity.Width = 81;
+            this.coltotal_quantity.Caption = "Total";
+            this.coltotal_quantity.FieldName = "total_quantity";
+            this.coltotal_quantity.Name = "coltotal_quantity";
+            this.coltotal_quantity.OptionsColumn.AllowEdit = false;
+            this.coltotal_quantity.OptionsColumn.ReadOnly = true;
+            this.coltotal_quantity.Visible = true;
+            this.coltotal_quantity.VisibleIndex = 4;
+            this.coltotal_quantity.Width = 83;
             // 
             // coldate_manufactured
             // 
@@ -392,6 +391,7 @@ namespace Treasurer2
             this.colprice.Caption = "Price";
             this.colprice.FieldName = "price";
             this.colprice.Name = "colprice";
+            this.colprice.OptionsColumn.AllowEdit = false;
             this.colprice.Visible = true;
             this.colprice.VisibleIndex = 8;
             this.colprice.Width = 138;
@@ -405,32 +405,9 @@ namespace Treasurer2
             this.colperson_responsible_for.OptionsColumn.ReadOnly = true;
             this.colperson_responsible_for.Width = 144;
             // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
-            // 
-            // usersdbDataSet3
-            // 
-            this.usersdbDataSet3.DataSetName = "usersdbDataSet3";
-            this.usersdbDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productBindingSource1
-            // 
-            this.productBindingSource1.DataMember = "product";
-            this.productBindingSource1.DataSource = this.usersdbDataSet3;
-            // 
             // productTableAdapter1
             // 
             this.productTableAdapter1.ClearBeforeFill = true;
-            // 
-            // coltotal_quantity
-            // 
-            this.coltotal_quantity.Caption = "Total";
-            this.coltotal_quantity.FieldName = "total_quantity";
-            this.coltotal_quantity.Name = "coltotal_quantity";
-            this.coltotal_quantity.Visible = true;
-            this.coltotal_quantity.VisibleIndex = 4;
-            this.coltotal_quantity.Width = 83;
             // 
             // ProductsOfTreasurer
             // 
@@ -444,11 +421,9 @@ namespace Treasurer2
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersdbDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,23 +442,12 @@ namespace Treasurer2
         private System.Windows.Forms.ToolStripTextBox toolStripTextBoxSearch;
         private System.Windows.Forms.ToolStripButton toolStripButtonSearch;
         private DevExpress.XtraBars.StandaloneBarDockControl standaloneBarDockControl1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colproduct_id;
-        private DevExpress.XtraGrid.Columns.GridColumn colpname;
-        private DevExpress.XtraGrid.Columns.GridColumn colptype;
         private DevExpress.XtraGrid.Columns.GridColumn coldate_manufactured;
         private DevExpress.XtraGrid.Columns.GridColumn coldate_expire;
         private DevExpress.XtraGrid.Columns.GridColumn colperson_responsible_for;
         private DevExpress.XtraGrid.Columns.GridColumn colimage;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton toolstripPrintButton;
-        private DevExpress.XtraGrid.Columns.GridColumn colprice;
-        private DevExpress.XtraGrid.Columns.GridColumn colstock_quantity;
-        private System.Windows.Forms.BindingSource productBindingSource;
-        private usersdbDataSet1 usersdbDataSet1;
-        private DevExpress.XtraGrid.Columns.GridColumn colquantity;
-        private usersdbDataSet1TableAdapters.productTableAdapter productTableAdapter;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem seeLogToolStripItem;
         private System.Windows.Forms.ToolStripMenuItem addLogToolStripMenuItem;
@@ -491,5 +455,12 @@ namespace Treasurer2
         private usersdbDataSet3 usersdbDataSet3;
         private DevExpress.XtraGrid.Columns.GridColumn coltotal_quantity;
         private usersdbDataSet3TableAdapters.productTableAdapter productTableAdapter1;
+        internal DevExpress.XtraGrid.GridControl gridControl1;
+        internal DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        internal DevExpress.XtraGrid.Columns.GridColumn colproduct_id;
+        internal DevExpress.XtraGrid.Columns.GridColumn colpname;
+        internal DevExpress.XtraGrid.Columns.GridColumn colptype;
+        internal DevExpress.XtraGrid.Columns.GridColumn colprice;
+        internal DevExpress.XtraGrid.Columns.GridColumn colstock_quantity;
     }
 }

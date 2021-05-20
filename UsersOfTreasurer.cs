@@ -18,6 +18,7 @@ namespace Treasurer2
     {
         MyDatabase db = new MyDatabase();
         PRODUCTS product = new PRODUCTS();
+        USERS users = new USERS();
 
 
         private static UsersOfTreasurer _instance;
@@ -92,8 +93,16 @@ namespace Treasurer2
         {
             if (gridView1.GetFocusedRowCellValue(coluser_id) != null)
             {
-                int uid = Convert.ToInt32(gridView1.GetFocusedRowCellValue(coluser_id));
-                product.deleteProduct(uid);
+                if (MessageBox.Show(gridView1.GetFocusedRowCellValue(coluser_id) + " дугаартай хэрэглэгчийг устгахдаа итгэлтэй байна уу", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    int uid = Convert.ToInt32(gridView1.GetFocusedRowCellValue(coluser_id));
+                    users.deleteUser(uid);
+                    MessageBox.Show("Хэрэглэгч бүртгэлээс устлаа", "Устгах", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Хэрэглэгч бүртгэлээс устсангүй", "Устгах", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
         #endregion

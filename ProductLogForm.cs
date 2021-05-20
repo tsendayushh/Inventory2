@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Threading;
 
 namespace Treasurer2
 {
@@ -18,6 +19,7 @@ namespace Treasurer2
         MyDatabase db = new MyDatabase();
         PRODUCTS product = new PRODUCTS();
         ProductLog productLog = new ProductLog();
+        ProductsOfTreasurer productsOfTreasurer = new ProductsOfTreasurer();
 
 
         public ProductLogForm()
@@ -54,6 +56,8 @@ namespace Treasurer2
             }
             else
             {
+                splashScreenManager1.ShowWaitForm();
+
                 //odoo uildej baigaa uildel ni owning listed bga esehig shalgah parametrvvd
                 int oid;
                 int pid = Convert.ToInt32(glueProduct.EditValue);
@@ -108,11 +112,13 @@ namespace Treasurer2
                         }
                         storageQuantity = storageQuantity - borrowQuantity;
                         product.updateProductQuantity(storageQuantity, pid);
+                        splashScreenManager1.CloseWaitForm();
                         return true;
                     }
                     else
                     {
                         MessageBox.Show("Нөөцөнд байгаа тоо хүрэлцэхгүй байна.", "Нөөцийн дутагдал", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        splashScreenManager1.CloseWaitForm();
                         return false;
                     }
                 }
@@ -137,6 +143,7 @@ namespace Treasurer2
 
 
 
+                            splashScreenManager1.CloseWaitForm();
                             return true;
                         }
                         else if(borrowQuantity == owningQuantity)
@@ -148,12 +155,15 @@ namespace Treasurer2
                             storageQuantity = storageQuantity + borrowQuantity;
                             product.updateProductQuantity(storageQuantity, pid);
 
+                            splashScreenManager1.CloseWaitForm();
                             return true;
                         }
                         else
                         {
                             //uurt baigaagaas ilvvg butsah gwl aldaa zaadg bh
                             MessageBox.Show("Таны оруулсан тоо хэмжээгээр буцаахад хэрэглэгчийн үзүэмшиж буй хэмжээ хүрэлцэхгүй байна.", "Буцаах", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            splashScreenManager1.CloseWaitForm();
                             return false;
                         }
                     }
@@ -161,9 +171,10 @@ namespace Treasurer2
                     else
                     {
                         MessageBox.Show("Таны оруулсан буцаалтын мэдээлэл гарсан бүртгэл хийгдээгүй байна. Та хэрэглэгчийн нэр болон бүтээгдэхүүний нэр ээ шалгаад дахин оролдно уу", "Буцаах", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        splashScreenManager1.CloseWaitForm();
                         return false;
                     }
-
                 }
             }
         }
@@ -201,8 +212,12 @@ namespace Treasurer2
                     db.closeConnection();
                     MessageBox.Show("Error", "Зээлэх/Буцаах", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                refreshForm();
+                MySqlCommand commandRefreshProductTable = new MySqlCommand("SELECT * FROM usersdb.product;", db.getConnection());
+                productsOfTreasurer.refreshGridview(commandRefreshProductTable);
             }
-            refreshForm();
+            
+
         }
         #endregion
 
@@ -225,10 +240,19 @@ namespace Treasurer2
         }
 
 
+        #region barButtonItemAddproductLog
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            if(splitContainerControl1.PanelVisibility == SplitPanelVisibility.Both)
+            {
+                splitContainerControl1.PanelVisibility = SplitPanelVisibility.Panel2;
+            }
+            else
+            {
+                splitContainerControl1.PanelVisibility = SplitPanelVisibility.Both;
+            }
         }
+        #endregion
 
 
 

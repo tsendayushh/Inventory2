@@ -50,6 +50,7 @@
     <Reference Include="DevExpress.Data.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.DataAccess.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v20.2.UI, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataVisualization.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Diagram.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -60,6 +61,7 @@
     <Reference Include="DevExpress.RichEdit.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.RichEdit.v20.2.Export, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Spreadsheet.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v20.2.UI, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -80,6 +82,7 @@
     <Reference Include="DevExpress.XtraReports.v20.2.CodeCompletion, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v20.2.Extensions, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraRichEdit.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraTreeList.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="MySql.Data, Version=8.0.24.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
@@ -117,12 +120,6 @@
     </Compile>
     <Compile Include="AddUserForm.Designer.cs">
       <DependentUpon>AddUserForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmWaitForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmWaitForm.Designer.cs">
-      <DependentUpon>frmWaitForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -202,30 +199,10 @@
       <DependentUpon>UpdateUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="USERS.cs" />
-    <Compile Include="usersdbDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>usersdbDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="usersdbDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>usersdbDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="usersdbDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>usersdbDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="usersdbDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>usersdbDataSet3.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="usersdbDataSet4.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>usersdbDataSet4.xsd</DependentUpon>
     </Compile>
     <Compile Include="usersdbDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -249,14 +226,23 @@
     <Compile Include="UsersOfTreasurer.Designer.cs">
       <DependentUpon>UsersOfTreasurer.cs</DependentUpon>
     </Compile>
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddProductForm.resx">
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddUserForm.resx">
       <DependentUpon>AddUserForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmWaitForm.resx">
-      <DependentUpon>frmWaitForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -311,6 +297,12 @@
     <EmbeddedResource Include="UsersOfTreasurer.resx">
       <DependentUpon>UsersOfTreasurer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -321,39 +313,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="usersdbDataSet.xsc">
-      <DependentUpon>usersdbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="usersdbDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>usersdbDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="usersdbDataSet.xss">
-      <DependentUpon>usersdbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="usersdbDataSet1.xsc">
-      <DependentUpon>usersdbDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="usersdbDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>usersdbDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="usersdbDataSet1.xss">
-      <DependentUpon>usersdbDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="usersdbDataSet2.xsc">
-      <DependentUpon>usersdbDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="usersdbDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>usersdbDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="usersdbDataSet2.xss">
-      <DependentUpon>usersdbDataSet2.xsd</DependentUpon>
-    </None>
     <None Include="usersdbDataSet3.xsc">
       <DependentUpon>usersdbDataSet3.xsd</DependentUpon>
     </None>
@@ -364,17 +323,6 @@
     </None>
     <None Include="usersdbDataSet3.xss">
       <DependentUpon>usersdbDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="usersdbDataSet4.xsc">
-      <DependentUpon>usersdbDataSet4.xsd</DependentUpon>
-    </None>
-    <None Include="usersdbDataSet4.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>usersdbDataSet4.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="usersdbDataSet4.xss">
-      <DependentUpon>usersdbDataSet4.xsd</DependentUpon>
     </None>
     <None Include="usersdbDataSet5.xsc">
       <DependentUpon>usersdbDataSet5.xsd</DependentUpon>

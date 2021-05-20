@@ -40,13 +40,10 @@ namespace Treasurer2
 
         private void splashScreenButton_Click(object sender, EventArgs e)
         {
-            SplashScreenManager.ShowForm(this, typeof(frmWaitForm), true, true);
-            SplashScreenManager.Default.SetWaitFormCaption("Та жоохон хүлээчихгүйюудоо ");
-            for(int i = 1; i < 100; i++)
-            {
-                Thread.Sleep(10);
-            }
-            SplashScreenManager.CloseForm();
+            splashScreenManager2.ShowWaitForm();
+            Thread.Sleep(1000);
+            splashScreenManager2.CloseWaitForm();
+            //SplashScreenManager.ShowForm(WaitForm, typeof(WaitForm), true, true,);
         }
     }
 }

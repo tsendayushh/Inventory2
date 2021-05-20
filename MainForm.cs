@@ -115,8 +115,24 @@ namespace Treasurer2
 
         private void accPrintProduct_Click(object sender, EventArgs e)
         {
-            PrintProductForm printProductForm = new PrintProductForm();
-            printProductForm.Show(this);
+            ProductsOfTreasurer productsOfTreasurer = new ProductsOfTreasurer();
+            //PrintProductForm printProductForm = new PrintProductForm();
+            //printProductForm.Show(this);
+
+            //XtraReport1 xtraReport1 = new XtraReport1();
+            //xtraReport1.Print
+            try
+            {
+                if (MessageBox.Show("Та энэ эд хөрөнгийн талаар хэвлэмэээр байна уу", "Хэвлэх", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+
+                    XtraReport1.FromFile("C:/Users/owner/Documents/XtraReports/XtraReport1.repx").Print("PDFCreator");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         private void accProductLog_Click(object sender, EventArgs e)

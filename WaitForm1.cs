@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Treasurer2
 {
-    public partial class frmWaitForm : WaitForm
+    public partial class WaitForm1 : WaitForm
     {
-        public frmWaitForm()
+        public WaitForm1()
         {
             InitializeComponent();
             this.progressPanel1.AutoHeight = true;

@@ -41,6 +41,7 @@ namespace Treasurer2
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.splashScreenButton = new DevExpress.XtraEditors.SimpleButton();
+            this.splashScreenManager2 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::Treasurer2.WaitForm1), true, true, typeof(System.Windows.Forms.UserControl));
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +108,7 @@ namespace Treasurer2
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(523, 21);
+            this.barDockControlTop.Size = new System.Drawing.Size(523, 25);
             // 
             // barDockControlBottom
             // 
@@ -121,17 +122,17 @@ namespace Treasurer2
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 21);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 25);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 276);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 272);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(523, 21);
+            this.barDockControlRight.Location = new System.Drawing.Point(523, 25);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 276);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 272);
             // 
             // splashScreenButton
             // 
@@ -141,6 +142,10 @@ namespace Treasurer2
             this.splashScreenButton.TabIndex = 4;
             this.splashScreenButton.Text = "Splash screen";
             this.splashScreenButton.Click += new System.EventHandler(this.splashScreenButton_Click);
+            // 
+            // splashScreenManager2
+            // 
+            this.splashScreenManager2.ClosingDelay = 500;
             // 
             // ThemeAndSkin
             // 
@@ -173,5 +178,7 @@ namespace Treasurer2
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraEditors.SimpleButton splashScreenButton;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
+        internal DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager2;
     }
 }

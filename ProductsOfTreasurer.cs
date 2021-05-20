@@ -241,13 +241,50 @@ namespace Treasurer2
         #region toolStripPrintButton_Click
         private void toolStripButton1_Click_1(object sender, EventArgs e)
         {
-            if ((gridView1.FocusedColumn.FieldName == "pname") ||
-               (gridView1.FocusedColumn.FieldName == "ptype"))
+            XtraReport1 xtraReport1 = new XtraReport1();
+            try
             {
-                string pid = Convert.ToString(gridView1.GetFocusedRowCellValue(colproduct_id));
+                
+                if (gridView1.GetFocusedRowCellValue(colproduct_id) != null)
+                {
+                    MySqlCommand command = new MySqlCommand("SELECT `pname`,`ptype`,`stock_quantity`,`price` FROM `usersdb`.`product`WHERE product_id = @pid;", db.getConnection());
+                    command.Parameters.Add("@pid", MySqlDbType.Int32).Value = Convert.ToInt32(gridView1.GetFocusedRowCellValue(colproduct_id));
+                    DataTable productTable = db.getDataTable(command);
+
+                    //MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+
+
+                    if (MessageBox.Show("Та энэ эд хөрөнгийн талаар хэвлэмэээр байна уу", "Хэвлэх", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        //product info table
+                        xtraReport1.xrTableCellPID.Text = gridView1.GetFocusedRowCellValue(colproduct_id).ToString();
+                        xtraReport1.xrTableCellPName.Text = productTable.Rows[0]["pname"].ToString();
+                        xtraReport1.xrTableCellPType.Text = productTable.Rows[0]["ptype"].ToString();
+                        xtraReport1.xrTableCellQuantity.Text = productTable.Rows[0]["stock_quantity"].ToString();
+                        xtraReport1.xrTableCellPrice.Text = productTable.Rows[0]["price"].ToString();
+                        
+                        // log table iin 
+                        //xtraReport1.xrTableCellLogID.bin = productTable.Columns["price"];
+                        xtraReport1.Print();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Хэвлэсэнүй", "Хэвлэх", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
         #endregion
+
+        public void printProductOwning(string productName, string productCategory)
+        {
+
+        }
 
         private void addLogToolStripMenuItem_Click(object sender, EventArgs e)
         {
